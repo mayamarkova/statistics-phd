@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Казус към Модул 11 · SPSS Навигатор</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+.case-wrap .kazus { margin-bottom:35px; border:1px solid #ddd; border-radius:12px; overflow:hidden; background:#fff; box-shadow:var(--shadow); }
+.case-wrap .kazus-header { padding:15px 22px; background:linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color:#fff; }
+.case-wrap .kazus-header .module-label { font-size:12px; opacity:.9; text-transform:uppercase; letter-spacing:1px; font-weight:bold; }
+.case-wrap .kazus-header .kazus-title { font-size:24px; font-weight:bold; margin-top:3px; margin-bottom:5px; }
+.case-wrap .kazus-header .kazus-meta { font-size:14px; opacity:.95; }
+.case-wrap .kazus-header .kazus-meta span { margin-right:15px; }
+.case-wrap .kazus-body { padding:20px 25px; background:#fff; line-height:1.7; }
+.case-wrap .section-label { font-size:18px; font-weight:bold; color:#1565c0; margin:18px 0 10px 0; padding-left:8px; border-left:3px solid #1565c0; }
+.case-wrap .section-label:first-child { margin-top:0; }
+.case-wrap .scenario { background:#fff8e1; padding:12px 16px; border-radius:8px; margin-bottom:12px; line-height:1.7; border-left:3px solid #ffa000; }
+.case-wrap .scenario strong { color:#e65100; }
+.case-wrap .task-list { margin:8px 0 12px 22px; line-height:1.8; }
+.case-wrap .task-list li { margin-bottom:4px; }
+.case-wrap .data-table { width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; }
+.case-wrap .data-table th { background:#37474f; color:#fff; padding:8px 10px; text-align:left; }
+.case-wrap .data-table td { padding:8px 10px; border-bottom:1px solid #e0e0e0; vertical-align:top; }
+.case-wrap .data-table tr:nth-child(even) td { background:#fafafa; }
+.case-wrap .output-sim, .case-wrap .mini-output, .case-wrap .formula-box, .case-wrap .decision-box, .case-wrap .hint-box, .case-wrap .teacher-note, .case-wrap .spss-box, .case-wrap .role-box, .case-wrap .mission-box { background:#f8fafc; border:1px solid #dbe2ea; border-radius:8px; padding:12px 16px; margin:10px 0; }
+.case-wrap details.answer-details { margin-top:14px; border:1px solid #86efac; background:#f0fdf4; border-radius:10px; overflow:hidden; }
+.case-wrap details.answer-details summary { list-style:none; cursor:pointer; padding:12px 16px; font-weight:700; background:#dcfce7; color:#166534; }
+.case-wrap details.answer-details summary::-webkit-details-marker { display:none; }
+.case-wrap .answer-box-static { padding:14px 16px; line-height:1.7; }
+.case-wrap .format-badge { display:inline-block; padding:2px 8px; border-radius:999px; font-weight:700; }
+.case-wrap .format-analysis { background:rgba(255,255,255,.15); }
+.case-wrap .format-detective { background:rgba(255,255,255,.15); }
+.case-wrap .format-roleplay { background:rgba(255,255,255,.15); }
+.case-wrap ul, .case-wrap ol { padding-left:20px; }
+.case-wrap p { margin:10px 0; }
+
+</style>
+</head>
+<body data-page="case-11">
+  <div class="mobile-topbar">
+    <button id="menuBtn" type="button">☰ Меню</button>
+    <strong>SPSS Навигатор</strong>
+  </div>
+  <div id="backdrop" class="sidebar-backdrop"></div>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar"><div class="brand">
+<h1>SPSS Навигатор</h1>
+<p>Курс по статистика със SPSS</p>
+</div>
+<a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
+<div class="nav-group-title">Учебни модули</div>
+<a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул 0: Фундаментът</span></a>
+<a class="nav-item" href="module-1.html"><span class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на данните</span></a>
+<a class="nav-item" href="module-2.html"><span class="nav-icon">📘</span><span>Модул 2: Описателна статистика</span></a>
+<a class="nav-item" href="module-3.html"><span class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално разпределение)</span></a>
+<a class="nav-item" href="module-4.html"><span class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
+<a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул 5: Две независими групи</span></a>
+<a class="nav-item" href="module-6.html"><span class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
+<a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул 7: Три или повече групи</span></a>
+<a class="nav-item" href="module-8.html"><span class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
+<a class="nav-item" href="module-9.html"><span class="nav-icon">📘</span><span>Модул 9: Линейна регресия</span></a>
+<a class="nav-item" href="module-10.html"><span class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
+<a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул 11: Валидиране на инструменти</span></a>
+<a class="nav-item" href="module-12.html"><span class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
+<div class="nav-group-title">Казуси</div>
+<a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус · Модул 0</span></a>
+<a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус · Модул 1</span></a>
+<a class="nav-item" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус · Модул 2</span></a>
+<a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус · Модул 3</span></a>
+<a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус · Модул 4</span></a>
+<a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус · Модул 5</span></a>
+<a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус · Модул 6</span></a>
+<a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус · Модул 7</span></a>
+<a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус · Модул 8</span></a>
+<a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус · Модул 9</span></a>
+<a class="nav-item" href="case-10.html"><span class="nav-icon">🧩</span><span>Казус · Модул 10</span></a>
+<a class="nav-item active" href="case-11.html"><span class="nav-icon">🧩</span><span>Казус · Модул 11</span></a>
+<a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус · Модул 12</span></a>
+<div class="nav-group-title">Материали</div>
+<a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
+<a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
+<a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
+<a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat Sheet</span></a>
+<a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
+<div class="footer-note">Курсови материали за докторанти</div></aside>
+    <main id="content" class="content">
+      <div class="page-shell">
+<div class="page-head">
+  <div class="eyebrow">Казуси</div>
+  <h1>Казус към Модул 11</h1>
+  <p><a class="inline-link" href="module-11.html">Към учебния модул</a></p>
+</div>
+<div class="kazus-linkbar"><a class="btn btn-soft" href="module-11.html">← Към теорията</a></div>
+<div class="case-wrap"><div class="kazus" id="m11">
+<div class="kazus-header" style="background: linear-gradient(135deg, #0277bd 0%, #01579b 100%);">
+<div class="module-label">Модул 11 · Валидиране на инструменти</div>
+<div class="kazus-title">Казус: "Анкетата ми надеждна ли е?"</div>
+<div class="kazus-meta">
+<span>⏱️ 20 мин.</span>
+<span class="format-badge format-analysis">📊 Аналитичен</span>
+<span>👥 Групи от 2-3</span>
+</div>
+</div>
+<div class="kazus-body">
+<div class="section-label">📋 Сценарий</div>
+<div class="scenario">
+            Докторант е създал <strong>нова анкета за измерване на академична мотивация</strong> с 8 айтъма. Преди да я използва в главното изследване, прави тест за надеждност. Ето резултатите.
+        </div>
+<div class="section-label">📊 SPSS Output — Reliability Analysis</div>
+<div class="output-sim">Case Processing Summary
+                N       %
+Cases Valid     180     100.0
+      Excluded  0       0.0
+      Total     180     100.0
+
+Reliability Statistics
+Cronbach's Alpha    N of Items
+0.68                8
+
+Item-Total Statistics
+             Scale Mean    Scale Variance    Corrected     Alpha if
+             if Item        if Item          Item-Total    Item
+             Deleted        Deleted          Correlation   Deleted
+Q1           27.45          18.23            0.58          0.62
+Q2           27.12          19.45            0.52          0.63
+Q3           27.88          17.89            0.61          0.61
+Q4           28.02          18.12            0.55          0.62
+Q5           27.34          21.23            0.12          0.74
+Q6           27.67          18.54            0.48          0.64
+Q7           27.23          20.11            0.28          0.69
+Q8           27.98          17.98            0.54          0.62</div>
+<div class="section-label">🎯 Въпроси</div>
+<ol class="task-list">
+<li>Какво е Cronbach's Alpha и какво означава стойността 0.68?</li>
+<li>Приемливо ли е тази анкета да се използва в дисертация?</li>
+<li>Кой айтъм е <strong>проблематичен</strong>? Как го виждате?</li>
+<li>Какво ще се случи с Alpha, ако премахнем <strong>Q5</strong>?</li>
+<li>Какви са 2-те възможни причини Q5 да се "държи" лошо?</li>
+<li>Има ли други айтъми за преразглеждане?</li>
+</ol>
+<details class="answer-details"><summary>Покажи решение</summary><div class="answer-box-static">
+<ol style="margin-left: 22px;">
+<li><strong>Cronbach's Alpha</strong> е коефициент за <strong>вътрешна съгласуваност</strong> — показва доколко айтъмите "мерят едно и също нещо". Стойности: &gt;0.9 отличен, &gt;0.8 много добър, &gt;0.7 добър, &gt;0.6 съмнителен, &lt;0.5 неприемлив. <strong>0.68 е на границата</strong> — минимално приемливо, но не идеално.</li>
+<li><strong>Гранично.</strong> За предварителен скрининг — да. За ключова скала в дисертация — препоръчително е да се подобри до &gt; 0.70.</li>
+<li><strong>Q5 е силно проблематичен:</strong> Corrected Item-Total Correlation = 0.12 (трябва да е &gt; 0.30). Той почти не корелира с останалите айтъми — може би мери нещо различно.</li>
+<li>Погледнете колоната <strong>"Alpha if Item Deleted" за Q5 = 0.74</strong>. Ако го премахнем, Alpha се покачва от 0.68 до 0.74 — значително подобрение.</li>
+<li>Възможни причини: <strong>(1)</strong> въпросът е формулиран двусмислено; <strong>(2)</strong> мери различна концепция (не академична мотивация); <strong>(3)</strong> е с обратно формулирано твърдение и не е бил правилно рекодиран (reverse-scored).</li>
+<li><strong>Да, Q7</strong> също е слабичък — Corrected Item-Total = 0.28. Ако Q5 се премахне, Q7 ще стане следващият за преглед. Други айтъми (Q1-Q4, Q6, Q8) имат приемливи корелации (&gt; 0.40).</li>
+</ol>
+<div class="tip" style="margin-top: 10px;">
+<strong>Практическа стратегия:</strong> (1) Махнете Q5, (2) прегенерирайте Cronbach's Alpha, (3) ако Alpha е &gt; 0.70 — анкетата е готова; (4) в дисертацията докладвайте: "След премахване на айтъм 5 поради ниска корелация с общата скала, финалната 7-айтъмна скала показа добра вътрешна надеждност (α = 0.74)."
+            </div>
+</div></details>
+
+</div>
+</div></div>
+<div class="section-nav">
+  <a class="btn btn-soft" href="case-10.html">← Казус 10</a>
+  <div class="nav-right">
+    <a class="btn btn-soft" href="module-11.html">Към модула</a>
+    <a class="btn btn-blue" href="case-12.html">Казус 12 →</a>
+  </div>
+</div>
+</div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

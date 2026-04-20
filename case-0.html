@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Казус към Модул 0 · SPSS Навигатор</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+.case-wrap .kazus { margin-bottom:35px; border:1px solid #ddd; border-radius:12px; overflow:hidden; background:#fff; box-shadow:var(--shadow); }
+.case-wrap .kazus-header { padding:15px 22px; background:linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color:#fff; }
+.case-wrap .kazus-header .module-label { font-size:12px; opacity:.9; text-transform:uppercase; letter-spacing:1px; font-weight:bold; }
+.case-wrap .kazus-header .kazus-title { font-size:24px; font-weight:bold; margin-top:3px; margin-bottom:5px; }
+.case-wrap .kazus-header .kazus-meta { font-size:14px; opacity:.95; }
+.case-wrap .kazus-header .kazus-meta span { margin-right:15px; }
+.case-wrap .kazus-body { padding:20px 25px; background:#fff; line-height:1.7; }
+.case-wrap .section-label { font-size:18px; font-weight:bold; color:#1565c0; margin:18px 0 10px 0; padding-left:8px; border-left:3px solid #1565c0; }
+.case-wrap .section-label:first-child { margin-top:0; }
+.case-wrap .scenario { background:#fff8e1; padding:12px 16px; border-radius:8px; margin-bottom:12px; line-height:1.7; border-left:3px solid #ffa000; }
+.case-wrap .scenario strong { color:#e65100; }
+.case-wrap .task-list { margin:8px 0 12px 22px; line-height:1.8; }
+.case-wrap .task-list li { margin-bottom:4px; }
+.case-wrap .data-table { width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; }
+.case-wrap .data-table th { background:#37474f; color:#fff; padding:8px 10px; text-align:left; }
+.case-wrap .data-table td { padding:8px 10px; border-bottom:1px solid #e0e0e0; vertical-align:top; }
+.case-wrap .data-table tr:nth-child(even) td { background:#fafafa; }
+.case-wrap .output-sim, .case-wrap .mini-output, .case-wrap .formula-box, .case-wrap .decision-box, .case-wrap .hint-box, .case-wrap .teacher-note, .case-wrap .spss-box, .case-wrap .role-box, .case-wrap .mission-box { background:#f8fafc; border:1px solid #dbe2ea; border-radius:8px; padding:12px 16px; margin:10px 0; }
+.case-wrap details.answer-details { margin-top:14px; border:1px solid #86efac; background:#f0fdf4; border-radius:10px; overflow:hidden; }
+.case-wrap details.answer-details summary { list-style:none; cursor:pointer; padding:12px 16px; font-weight:700; background:#dcfce7; color:#166534; }
+.case-wrap details.answer-details summary::-webkit-details-marker { display:none; }
+.case-wrap .answer-box-static { padding:14px 16px; line-height:1.7; }
+.case-wrap .format-badge { display:inline-block; padding:2px 8px; border-radius:999px; font-weight:700; }
+.case-wrap .format-analysis { background:rgba(255,255,255,.15); }
+.case-wrap .format-detective { background:rgba(255,255,255,.15); }
+.case-wrap .format-roleplay { background:rgba(255,255,255,.15); }
+.case-wrap ul, .case-wrap ol { padding-left:20px; }
+.case-wrap p { margin:10px 0; }
+
+</style>
+</head>
+<body data-page="case-0">
+  <div class="mobile-topbar">
+    <button id="menuBtn" type="button">☰ Меню</button>
+    <strong>SPSS Навигатор</strong>
+  </div>
+  <div id="backdrop" class="sidebar-backdrop"></div>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar"><div class="brand">
+<h1>SPSS Навигатор</h1>
+<p>Курс по статистика със SPSS</p>
+</div>
+<a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
+<div class="nav-group-title">Учебни модули</div>
+<a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул 0: Фундаментът</span></a>
+<a class="nav-item" href="module-1.html"><span class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на данните</span></a>
+<a class="nav-item" href="module-2.html"><span class="nav-icon">📘</span><span>Модул 2: Описателна статистика</span></a>
+<a class="nav-item" href="module-3.html"><span class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално разпределение)</span></a>
+<a class="nav-item" href="module-4.html"><span class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
+<a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул 5: Две независими групи</span></a>
+<a class="nav-item" href="module-6.html"><span class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
+<a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул 7: Три или повече групи</span></a>
+<a class="nav-item" href="module-8.html"><span class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
+<a class="nav-item" href="module-9.html"><span class="nav-icon">📘</span><span>Модул 9: Линейна регресия</span></a>
+<a class="nav-item" href="module-10.html"><span class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
+<a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул 11: Валидиране на инструменти</span></a>
+<a class="nav-item" href="module-12.html"><span class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
+<div class="nav-group-title">Казуси</div>
+<a class="nav-item active" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус · Модул 0</span></a>
+<a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус · Модул 1</span></a>
+<a class="nav-item" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус · Модул 2</span></a>
+<a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус · Модул 3</span></a>
+<a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус · Модул 4</span></a>
+<a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус · Модул 5</span></a>
+<a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус · Модул 6</span></a>
+<a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус · Модул 7</span></a>
+<a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус · Модул 8</span></a>
+<a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус · Модул 9</span></a>
+<a class="nav-item" href="case-10.html"><span class="nav-icon">🧩</span><span>Казус · Модул 10</span></a>
+<a class="nav-item" href="case-11.html"><span class="nav-icon">🧩</span><span>Казус · Модул 11</span></a>
+<a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус · Модул 12</span></a>
+<div class="nav-group-title">Материали</div>
+<a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
+<a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
+<a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
+<a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat Sheet</span></a>
+<a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
+<div class="footer-note">Курсови материали за докторанти</div></aside>
+    <main id="content" class="content">
+      <div class="page-shell">
+<div class="page-head">
+  <div class="eyebrow">Казуси</div>
+  <h1>Казус към Модул 0</h1>
+  <p><a class="inline-link" href="module-0.html">Към учебния модул</a></p>
+</div>
+<div class="kazus-linkbar"><a class="btn btn-soft" href="module-0.html">← Към теорията</a></div>
+<div class="case-wrap"><div class="kazus" id="m0">
+<div class="kazus-header">
+<div class="module-label">Модул 0 · Фундаментът</div>
+<div class="kazus-title">Казус: "От идея до план"</div>
+<div class="kazus-meta">
+<span>⏱️ 15-20 мин.</span>
+<span class="format-badge format-analysis">📊 Аналитичен</span>
+<span>👥 Групи от 2-3 души</span>
+</div>
+</div>
+<div class="kazus-body">
+<div class="section-label">📋 Сценарий</div>
+<div class="scenario">
+            Докторант <strong>Николай</strong> идва на първа среща с научния си ръководител и казва: <em>"Искам да изследвам как социалните мрежи влияят на студентите."</em> Ръководителят отговаря: <em>"Това не е научен въпрос. Помогни ми да го превърнем в такъв."</em>
+</div>
+<div class="section-label">🎯 Задача на групите (10 мин.)</div>
+<p>За 10 минути трябва да превърнете тази "идея" в конкретен научен план. Отговорете на следните въпроси:</p>
+<ol class="task-list">
+<li>Формулирайте <strong>2 конкретни тестируеми хипотези</strong> (H1, H2).</li>
+<li>За всяка хипотеза посочете: <strong>Каква е зависимата променлива? Каква е независимата?</strong></li>
+<li>Какъв <strong>тип са променливите</strong> (Nominal/Ordinal/Scale)?</li>
+<li>Какъв ще е <strong>минималният размер на извадката</strong> и защо?</li>
+<li>Кой <strong>статистически тест</strong> планирате да използвате за всяка хипотеза?</li>
+</ol>
+<div class="section-label">💬 Обсъждане (5-10 мин.)</div>
+<p>Всяка група представя плана си пред класа (1-2 мин.). Другите групи могат да задават въпроси.</p>
+<details class="answer-details"><summary>Покажи примерно решение</summary><div class="answer-box-static">
+<strong>Примерно валидно превъплъщение на идеята:</strong>
+<p style="margin-top: 8px;"><strong>H1:</strong> Студентите, които прекарват повече часове в социални мрежи дневно, имат по-нисък среден успех (GPA).</p>
+<ul style="margin-left: 22px; margin-top: 4px;">
+<li>Зависима: GPA (Scale)</li>
+<li>Независима: часове в соц. мрежи (Scale)</li>
+<li>Тест: <strong>Корелация на Pearson</strong> (при нормално разпределение)</li>
+<li>Минимална извадка: N ≥ 50 (за корелация)</li>
+</ul>
+<p style="margin-top: 8px;"><strong>H2:</strong> Има разлика в средното време в социалните мрежи между студенти от технически и хуманитарни специалности.</p>
+<ul style="margin-left: 22px; margin-top: 4px;">
+<li>Зависима: часове в соц. мрежи (Scale)</li>
+<li>Независима: специалност (Nominal, 2 групи)</li>
+<li>Тест: <strong>Independent samples t-test</strong></li>
+<li>Минимална извадка: N ≥ 30 във всяка група</li>
+</ul>
+<p style="margin-top: 10px;"><em>Ключов извод за докторантите:</em> Идея без операционализация е безполезна. Първо се планират хипотези и тестове, <strong>после</strong> се събират данни.</p>
+</div></details>
+
+</div>
+</div></div>
+<div class="section-nav">
+  <span></span>
+  <div class="nav-right">
+    <a class="btn btn-soft" href="module-0.html">Към модула</a>
+    <a class="btn btn-blue" href="case-1.html">Казус 1 →</a>
+  </div>
+</div>
+</div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

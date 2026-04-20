@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Казус към Модул 10 · SPSS Навигатор</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+.case-wrap .kazus { margin-bottom:35px; border:1px solid #ddd; border-radius:12px; overflow:hidden; background:#fff; box-shadow:var(--shadow); }
+.case-wrap .kazus-header { padding:15px 22px; background:linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color:#fff; }
+.case-wrap .kazus-header .module-label { font-size:12px; opacity:.9; text-transform:uppercase; letter-spacing:1px; font-weight:bold; }
+.case-wrap .kazus-header .kazus-title { font-size:24px; font-weight:bold; margin-top:3px; margin-bottom:5px; }
+.case-wrap .kazus-header .kazus-meta { font-size:14px; opacity:.95; }
+.case-wrap .kazus-header .kazus-meta span { margin-right:15px; }
+.case-wrap .kazus-body { padding:20px 25px; background:#fff; line-height:1.7; }
+.case-wrap .section-label { font-size:18px; font-weight:bold; color:#1565c0; margin:18px 0 10px 0; padding-left:8px; border-left:3px solid #1565c0; }
+.case-wrap .section-label:first-child { margin-top:0; }
+.case-wrap .scenario { background:#fff8e1; padding:12px 16px; border-radius:8px; margin-bottom:12px; line-height:1.7; border-left:3px solid #ffa000; }
+.case-wrap .scenario strong { color:#e65100; }
+.case-wrap .task-list { margin:8px 0 12px 22px; line-height:1.8; }
+.case-wrap .task-list li { margin-bottom:4px; }
+.case-wrap .data-table { width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; }
+.case-wrap .data-table th { background:#37474f; color:#fff; padding:8px 10px; text-align:left; }
+.case-wrap .data-table td { padding:8px 10px; border-bottom:1px solid #e0e0e0; vertical-align:top; }
+.case-wrap .data-table tr:nth-child(even) td { background:#fafafa; }
+.case-wrap .output-sim, .case-wrap .mini-output, .case-wrap .formula-box, .case-wrap .decision-box, .case-wrap .hint-box, .case-wrap .teacher-note, .case-wrap .spss-box, .case-wrap .role-box, .case-wrap .mission-box { background:#f8fafc; border:1px solid #dbe2ea; border-radius:8px; padding:12px 16px; margin:10px 0; }
+.case-wrap details.answer-details { margin-top:14px; border:1px solid #86efac; background:#f0fdf4; border-radius:10px; overflow:hidden; }
+.case-wrap details.answer-details summary { list-style:none; cursor:pointer; padding:12px 16px; font-weight:700; background:#dcfce7; color:#166534; }
+.case-wrap details.answer-details summary::-webkit-details-marker { display:none; }
+.case-wrap .answer-box-static { padding:14px 16px; line-height:1.7; }
+.case-wrap .format-badge { display:inline-block; padding:2px 8px; border-radius:999px; font-weight:700; }
+.case-wrap .format-analysis { background:rgba(255,255,255,.15); }
+.case-wrap .format-detective { background:rgba(255,255,255,.15); }
+.case-wrap .format-roleplay { background:rgba(255,255,255,.15); }
+.case-wrap ul, .case-wrap ol { padding-left:20px; }
+.case-wrap p { margin:10px 0; }
+
+</style>
+</head>
+<body data-page="case-10">
+  <div class="mobile-topbar">
+    <button id="menuBtn" type="button">☰ Меню</button>
+    <strong>SPSS Навигатор</strong>
+  </div>
+  <div id="backdrop" class="sidebar-backdrop"></div>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar"><div class="brand">
+<h1>SPSS Навигатор</h1>
+<p>Курс по статистика със SPSS</p>
+</div>
+<a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
+<div class="nav-group-title">Учебни модули</div>
+<a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул 0: Фундаментът</span></a>
+<a class="nav-item" href="module-1.html"><span class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на данните</span></a>
+<a class="nav-item" href="module-2.html"><span class="nav-icon">📘</span><span>Модул 2: Описателна статистика</span></a>
+<a class="nav-item" href="module-3.html"><span class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално разпределение)</span></a>
+<a class="nav-item" href="module-4.html"><span class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
+<a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул 5: Две независими групи</span></a>
+<a class="nav-item" href="module-6.html"><span class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
+<a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул 7: Три или повече групи</span></a>
+<a class="nav-item" href="module-8.html"><span class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
+<a class="nav-item" href="module-9.html"><span class="nav-icon">📘</span><span>Модул 9: Линейна регресия</span></a>
+<a class="nav-item" href="module-10.html"><span class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
+<a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул 11: Валидиране на инструменти</span></a>
+<a class="nav-item" href="module-12.html"><span class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
+<div class="nav-group-title">Казуси</div>
+<a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус · Модул 0</span></a>
+<a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус · Модул 1</span></a>
+<a class="nav-item" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус · Модул 2</span></a>
+<a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус · Модул 3</span></a>
+<a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус · Модул 4</span></a>
+<a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус · Модул 5</span></a>
+<a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус · Модул 6</span></a>
+<a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус · Модул 7</span></a>
+<a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус · Модул 8</span></a>
+<a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус · Модул 9</span></a>
+<a class="nav-item active" href="case-10.html"><span class="nav-icon">🧩</span><span>Казус · Модул 10</span></a>
+<a class="nav-item" href="case-11.html"><span class="nav-icon">🧩</span><span>Казус · Модул 11</span></a>
+<a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус · Модул 12</span></a>
+<div class="nav-group-title">Материали</div>
+<a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
+<a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
+<a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
+<a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat Sheet</span></a>
+<a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
+<div class="footer-note">Курсови материали за докторанти</div></aside>
+    <main id="content" class="content">
+      <div class="page-shell">
+<div class="page-head">
+  <div class="eyebrow">Казуси</div>
+  <h1>Казус към Модул 10</h1>
+  <p><a class="inline-link" href="module-10.html">Към учебния модул</a></p>
+</div>
+<div class="kazus-linkbar"><a class="btn btn-soft" href="module-10.html">← Към теорията</a></div>
+<div class="case-wrap"><div class="kazus" id="m10">
+<div class="kazus-header" style="background: linear-gradient(135deg, #c62828 0%, #b71c1c 100%);">
+<div class="module-label">Модул 10 · Логистична регресия</div>
+<div class="kazus-title">Казус: "Одд или не?"</div>
+<div class="kazus-meta">
+<span>⏱️ 15-20 мин.</span>
+<span class="format-badge format-analysis">📊 Аналитичен</span>
+<span>👥 Групи от 2-3</span>
+</div>
+</div>
+<div class="kazus-body">
+<div class="section-label">📋 Сценарий</div>
+<div class="scenario">
+            Докторант моделира <strong>вероятността докторант да защити дисертация в срок</strong> (Да=1, Не=0) на база 3 фактора: възраст при започване, брой публикации към 2-ра година, и работещ/неработещ (извън докторантурата).
+        </div>
+<div class="section-label">📊 SPSS Output</div>
+<div class="output-sim">Model Summary
+Step    -2 Log Likelihood    Cox &amp; Snell R²    Nagelkerke R²
+1       112.45               0.284              0.412
+
+Classification Table
+                    Predicted
+Observed          Ne     Da    Percentage Correct
+Ne                 48    12    80.0
+Da                 14    46    76.7
+Overall Percentage                   78.3
+
+Variables in the Equation
+                  B       S.E.    Wald    df    Sig.     Exp(B)
+Vazrast           -0.08   0.03    7.11    1     0.008    0.92
+Publikatsii        0.68   0.21   10.48    1     0.001    1.97
+Raboti            -1.24   0.48    6.68    1     0.010    0.29
+Constant           3.12   1.14    7.48    1     0.006   22.65</div>
+<div class="section-label">🎯 Въпроси</div>
+<ol class="task-list">
+<li>Колко процент от случаите моделът предсказва правилно?</li>
+<li>Всички предиктори ли са значими?</li>
+<li>Интерпретирайте <strong>Exp(B) = 1.97 за Publikatsii</strong>.</li>
+<li>Интерпретирайте <strong>Exp(B) = 0.29 за Raboti</strong>.</li>
+<li>Какво означава <strong>отрицателният B за Vazrast</strong>?</li>
+<li>Кой е най-силният предиктор на защита в срок?</li>
+</ol>
+<details class="answer-details"><summary>Покажи решение</summary><div class="answer-box-static">
+<ol style="margin-left: 22px;">
+<li><strong>78.3%</strong> (Overall Percentage в Classification Table). За социални науки това е добър резултат.</li>
+<li><strong>Да, и трите</strong>. Всички имат Sig. &lt; 0.05 (Wald тест).</li>
+<li><strong>Exp(B) = 1.97 за Publikatsii:</strong> Всяка допълнителна публикация <strong>увеличава шанса</strong> за защита в срок <strong>с 97%</strong> (т.е. шансовете стават 1.97 пъти по-големи). Силен положителен ефект.</li>
+<li><strong>Exp(B) = 0.29 за Raboti:</strong> Работещите докторанти имат <strong>71% по-малки шансове</strong> (1 - 0.29 = 0.71) да защитят в срок спрямо неработещите. OR под 1 означава намален шанс.</li>
+<li><strong>Отрицателен B = -0.08 за Vazrast:</strong> Всяка допълнителна година възраст при започване намалява шансовете за защита в срок. Exp(B) = 0.92 → 8% по-малки шансове за всяка година. По-младите докторанти защитават по-често в срок.</li>
+<li><strong>Работата извън докторантурата</strong> — OR = 0.29 (или обратното 1/0.29 = 3.45) е най-силният ефект. Работещите имат значително по-малко шансове да защитят в срок.</li>
+</ol>
+<div class="warning" style="margin-top: 10px;">
+<strong>Капан за начинаещи:</strong> При интерпретация на Exp(B):<br/>
+                • Exp(B) &gt; 1 → увеличава шанс<br/>
+                • Exp(B) &lt; 1 → намалява шанс<br/>
+                • Exp(B) = 1 → без ефект<br/>
+                Никога не казвайте "вероятност" вместо "шанс" — това са различни понятия в статистиката! OR работи с шансове (odds), не с вероятности.
+            </div>
+</div></details>
+
+</div>
+</div></div>
+<div class="section-nav">
+  <a class="btn btn-soft" href="case-9.html">← Казус 9</a>
+  <div class="nav-right">
+    <a class="btn btn-soft" href="module-10.html">Към модула</a>
+    <a class="btn btn-blue" href="case-11.html">Казус 11 →</a>
+  </div>
+</div>
+</div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

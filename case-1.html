@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Казус към Модул 1 · SPSS Навигатор</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+.case-wrap .kazus { margin-bottom:35px; border:1px solid #ddd; border-radius:12px; overflow:hidden; background:#fff; box-shadow:var(--shadow); }
+.case-wrap .kazus-header { padding:15px 22px; background:linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color:#fff; }
+.case-wrap .kazus-header .module-label { font-size:12px; opacity:.9; text-transform:uppercase; letter-spacing:1px; font-weight:bold; }
+.case-wrap .kazus-header .kazus-title { font-size:24px; font-weight:bold; margin-top:3px; margin-bottom:5px; }
+.case-wrap .kazus-header .kazus-meta { font-size:14px; opacity:.95; }
+.case-wrap .kazus-header .kazus-meta span { margin-right:15px; }
+.case-wrap .kazus-body { padding:20px 25px; background:#fff; line-height:1.7; }
+.case-wrap .section-label { font-size:18px; font-weight:bold; color:#1565c0; margin:18px 0 10px 0; padding-left:8px; border-left:3px solid #1565c0; }
+.case-wrap .section-label:first-child { margin-top:0; }
+.case-wrap .scenario { background:#fff8e1; padding:12px 16px; border-radius:8px; margin-bottom:12px; line-height:1.7; border-left:3px solid #ffa000; }
+.case-wrap .scenario strong { color:#e65100; }
+.case-wrap .task-list { margin:8px 0 12px 22px; line-height:1.8; }
+.case-wrap .task-list li { margin-bottom:4px; }
+.case-wrap .data-table { width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; }
+.case-wrap .data-table th { background:#37474f; color:#fff; padding:8px 10px; text-align:left; }
+.case-wrap .data-table td { padding:8px 10px; border-bottom:1px solid #e0e0e0; vertical-align:top; }
+.case-wrap .data-table tr:nth-child(even) td { background:#fafafa; }
+.case-wrap .output-sim, .case-wrap .mini-output, .case-wrap .formula-box, .case-wrap .decision-box, .case-wrap .hint-box, .case-wrap .teacher-note, .case-wrap .spss-box, .case-wrap .role-box, .case-wrap .mission-box { background:#f8fafc; border:1px solid #dbe2ea; border-radius:8px; padding:12px 16px; margin:10px 0; }
+.case-wrap details.answer-details { margin-top:14px; border:1px solid #86efac; background:#f0fdf4; border-radius:10px; overflow:hidden; }
+.case-wrap details.answer-details summary { list-style:none; cursor:pointer; padding:12px 16px; font-weight:700; background:#dcfce7; color:#166534; }
+.case-wrap details.answer-details summary::-webkit-details-marker { display:none; }
+.case-wrap .answer-box-static { padding:14px 16px; line-height:1.7; }
+.case-wrap .format-badge { display:inline-block; padding:2px 8px; border-radius:999px; font-weight:700; }
+.case-wrap .format-analysis { background:rgba(255,255,255,.15); }
+.case-wrap .format-detective { background:rgba(255,255,255,.15); }
+.case-wrap .format-roleplay { background:rgba(255,255,255,.15); }
+.case-wrap ul, .case-wrap ol { padding-left:20px; }
+.case-wrap p { margin:10px 0; }
+
+</style>
+</head>
+<body data-page="case-1">
+  <div class="mobile-topbar">
+    <button id="menuBtn" type="button">☰ Меню</button>
+    <strong>SPSS Навигатор</strong>
+  </div>
+  <div id="backdrop" class="sidebar-backdrop"></div>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar"><div class="brand">
+<h1>SPSS Навигатор</h1>
+<p>Курс по статистика със SPSS</p>
+</div>
+<a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
+<div class="nav-group-title">Учебни модули</div>
+<a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул 0: Фундаментът</span></a>
+<a class="nav-item" href="module-1.html"><span class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на данните</span></a>
+<a class="nav-item" href="module-2.html"><span class="nav-icon">📘</span><span>Модул 2: Описателна статистика</span></a>
+<a class="nav-item" href="module-3.html"><span class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално разпределение)</span></a>
+<a class="nav-item" href="module-4.html"><span class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
+<a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул 5: Две независими групи</span></a>
+<a class="nav-item" href="module-6.html"><span class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
+<a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул 7: Три или повече групи</span></a>
+<a class="nav-item" href="module-8.html"><span class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
+<a class="nav-item" href="module-9.html"><span class="nav-icon">📘</span><span>Модул 9: Линейна регресия</span></a>
+<a class="nav-item" href="module-10.html"><span class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
+<a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул 11: Валидиране на инструменти</span></a>
+<a class="nav-item" href="module-12.html"><span class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
+<div class="nav-group-title">Казуси</div>
+<a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус · Модул 0</span></a>
+<a class="nav-item active" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус · Модул 1</span></a>
+<a class="nav-item" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус · Модул 2</span></a>
+<a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус · Модул 3</span></a>
+<a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус · Модул 4</span></a>
+<a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус · Модул 5</span></a>
+<a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус · Модул 6</span></a>
+<a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус · Модул 7</span></a>
+<a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус · Модул 8</span></a>
+<a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус · Модул 9</span></a>
+<a class="nav-item" href="case-10.html"><span class="nav-icon">🧩</span><span>Казус · Модул 10</span></a>
+<a class="nav-item" href="case-11.html"><span class="nav-icon">🧩</span><span>Казус · Модул 11</span></a>
+<a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус · Модул 12</span></a>
+<div class="nav-group-title">Материали</div>
+<a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
+<a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
+<a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
+<a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat Sheet</span></a>
+<a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
+<div class="footer-note">Курсови материали за докторанти</div></aside>
+    <main id="content" class="content">
+      <div class="page-shell">
+<div class="page-head">
+  <div class="eyebrow">Казуси</div>
+  <h1>Казус към Модул 1</h1>
+  <p><a class="inline-link" href="module-1.html">Към учебния модул</a></p>
+</div>
+<div class="kazus-linkbar"><a class="btn btn-soft" href="module-1.html">← Към теорията</a></div>
+<div class="case-wrap"><div class="kazus" id="m1">
+<div class="kazus-header" style="background: linear-gradient(135deg, #e65100 0%, #bf360c 100%);">
+<div class="module-label">Модул 1 · Подготовка на данните</div>
+<div class="kazus-title">Казус: "Намери грешката в SPSS"</div>
+<div class="kazus-meta">
+<span>⏱️ 15 мин.</span>
+<span class="format-badge format-detective">🕵️ Детективски</span>
+<span>👥 Групи от 2 души</span>
+</div>
+</div>
+<div class="kazus-body">
+<div class="section-label">📋 Сценарий</div>
+<div class="scenario">
+            Колегата ви <strong>Елена</strong> ви показва Variable View в SPSS и казва: <em>"Не разбирам защо резултатите ми от t-теста изглеждат странно."</em> Намерете <strong>5-те грешки</strong> в настройките на нейните променливи.
+        </div>
+<div class="section-label">🔍 Variable View — как изглежда в SPSS</div>
+<table class="data-table">
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Decimals</th>
+<th>Values</th>
+<th>Missing</th>
+<th>Measure</th>
+</tr>
+<tr>
+<td>ime</td>
+<td>String</td>
+<td>0</td>
+<td>None</td>
+<td>None</td>
+<td>Nominal</td>
+</tr>
+<tr style="background: #ffebee;">
+<td>vazrast</td>
+<td>String</td>
+<td>0</td>
+<td>None</td>
+<td>None</td>
+<td>Nominal</td>
+</tr>
+<tr style="background: #ffebee;">
+<td>pol</td>
+<td>Numeric</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td>Nominal</td>
+</tr>
+<tr style="background: #ffebee;">
+<td>obrazov</td>
+<td>Numeric</td>
+<td>0</td>
+<td>1, 2, 3</td>
+<td>None</td>
+<td>Scale</td>
+</tr>
+<tr style="background: #ffebee;">
+<td>uspeh</td>
+<td>Numeric</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td>Scale</td>
+</tr>
+</table>
+<div class="section-label">🎯 Задача</div>
+<p>Намерете 5-те грешки в таблицата. Първата група с всички правилни отговори печели!</p>
+<details class="answer-details"><summary>Покажи решение</summary><div class="answer-box-static">
+<strong>5-те грешки:</strong>
+<ol style="margin-left: 22px; margin-top: 8px;">
+<li><strong>vazrast е String</strong> — трябва да е Numeric (иначе не можем да правим математически операции с нея)</li>
+<li><strong>vazrast е Nominal</strong> — трябва да е Scale (възрастта е числова)</li>
+<li><strong>pol има 2 десетични</strong> — безсмислено за категория (1.00 за мъж?); трябва да е 0</li>
+<li><strong>pol няма Value Labels</strong> — трябва да се дефинира 1 = Мъж, 2 = Жена</li>
+<li><strong>obrazov е Scale</strong> — трябва да е Ordinal (основно/средно/висше имат ред)</li>
+<li><strong>uspeh няма дефинирани Missing values</strong> — обикновено се кодира 999 или 99 като Missing</li>
+</ol>
+<div class="tip" style="margin-top: 10px;">
+<strong>Защо е важно:</strong> Ако Measure е зададен грешно, SPSS ще позволи да правите "средна стойност на пола" или "стандартно отклонение на образованието" — глупости, които могат да попаднат в дисертацията.
+            </div>
+</div></details>
+
+</div>
+</div></div>
+<div class="section-nav">
+  <a class="btn btn-soft" href="case-0.html">← Казус 0</a>
+  <div class="nav-right">
+    <a class="btn btn-soft" href="module-1.html">Към модула</a>
+    <a class="btn btn-blue" href="case-2.html">Казус 2 →</a>
+  </div>
+</div>
+</div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

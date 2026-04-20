@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модул 9: Линейна регресия · SPSS Навигатор</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body data-page="module-9">
+  <div class="mobile-topbar">
+    <button id="menuBtn" type="button">☰ Меню</button>
+    <strong>SPSS Навигатор</strong>
+  </div>
+  <div id="backdrop" class="sidebar-backdrop"></div>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar"><div class="brand">
+<h1>SPSS Навигатор</h1>
+<p>Курс по статистика със SPSS</p>
+</div>
+<a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
+<div class="nav-group-title">Учебни модули</div>
+<a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул 0: Фундаментът</span></a>
+<a class="nav-item" href="module-1.html"><span class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на данните</span></a>
+<a class="nav-item" href="module-2.html"><span class="nav-icon">📘</span><span>Модул 2: Описателна статистика</span></a>
+<a class="nav-item" href="module-3.html"><span class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално разпределение)</span></a>
+<a class="nav-item" href="module-4.html"><span class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
+<a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул 5: Две независими групи</span></a>
+<a class="nav-item" href="module-6.html"><span class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
+<a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул 7: Три или повече групи</span></a>
+<a class="nav-item" href="module-8.html"><span class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
+<a class="nav-item active" href="module-9.html"><span class="nav-icon">📘</span><span>Модул 9: Линейна регресия</span></a>
+<a class="nav-item" href="module-10.html"><span class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
+<a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул 11: Валидиране на инструменти</span></a>
+<a class="nav-item" href="module-12.html"><span class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
+<div class="nav-group-title">Казуси</div>
+<a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус · Модул 0</span></a>
+<a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус · Модул 1</span></a>
+<a class="nav-item" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус · Модул 2</span></a>
+<a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус · Модул 3</span></a>
+<a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус · Модул 4</span></a>
+<a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус · Модул 5</span></a>
+<a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус · Модул 6</span></a>
+<a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус · Модул 7</span></a>
+<a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус · Модул 8</span></a>
+<a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус · Модул 9</span></a>
+<a class="nav-item" href="case-10.html"><span class="nav-icon">🧩</span><span>Казус · Модул 10</span></a>
+<a class="nav-item" href="case-11.html"><span class="nav-icon">🧩</span><span>Казус · Модул 11</span></a>
+<a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус · Модул 12</span></a>
+<div class="nav-group-title">Материали</div>
+<a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
+<a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
+<a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
+<a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat Sheet</span></a>
+<a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
+<div class="footer-note">Курсови материали за докторанти</div></aside>
+    <main id="content" class="content">
+      <div class="page-shell">
+<div class="page-head">
+  <div class="eyebrow">Учебен модул 9</div>
+  <h1>Модул 9: Линейна регресия</h1>
+  <p>Предсказване на бъдещето</p>
+</div>
+<div class="card pad">
+  <div class="intro-box">
+    <div class="info-badge">i</div>
+    <div><strong>Въведение</strong><br><span style="display:block; margin-top:6px; line-height:1.8;">Регресията е &#x27;Кралят&#x27; на анализите. Тя ви позволява не просто да кажете, че нещата са свързани, а да изграждате модели и да прогнозирате.</span></div>
+  </div>
+</div>
+<div class="card pad" style="margin-top:20px;">
+  <h3 style="margin-top:0;">Подтеми</h3>
+  <div class="topic-chip-row"><a class="topic-chip" href="#topic-1">1. Корелация vs. Регресия</a><a class="topic-chip" href="#topic-2">2. Множествена линейна регресия</a><a class="topic-chip" href="#topic-3">3. Коефициент на детерминация (R²)</a><a class="topic-chip" href="#topic-4">4. Проверка на мултиколинеарност</a></div>
+</div>
+<div class="topic-stack">
+        <article id="topic-1" class="topic-block">
+          <div class="topic-order">Тема 1</div>
+          <h3>Корелация vs. Регресия</h3>
+          <div class="topic-text">Разликата е фундаментална! Корелацията е симетрична (&#x27;Свързани ли са?&#x27;). Регресията има посока (&#x27;Мога ли да предскажа Y, ако знам X?&#x27;). Вие дефинирате Предиктор (Независима) и Резултат (Зависима). Моделът описва математическото уравнение на тази връзка.</div>
+          <div class="terminal"><div class="terminal-head">Как да го направим в SPSS</div><pre>Концептуална стъпка. Преди да пуснете анализа, трябва да сте 100% сигурни коя променлива е причината (Independent) и коя е следствието (Dependent).</pre></div>
+          <div class="section-nav">
+            <span></span>
+            <div class="nav-right">
+              <a class="btn btn-soft" href="case-9.html">Към казуса</a>
+              <a class="btn btn-blue" href="#topic-2">Следваща тема →</a>
+            </div>
+          </div>
+        </article>
+        
+        <article id="topic-2" class="topic-block">
+          <div class="topic-order">Тема 2</div>
+          <h3>Множествена линейна регресия</h3>
+          <div class="topic-text">Използва се, когато имате една количествена зависима променлива и НЯКОЛКО независими предиктора едновременно. Позволява да видите кой фактор има най-силно влияние, докато контролирате останалите.</div>
+          <div class="terminal"><div class="terminal-head">Как да го направим в SPSS</div><pre>1. Analyze &gt; Regression &gt; Linear.
+2. В полето &#x27;Dependent&#x27; сложете изследвания резултат.
+3. В полето &#x27;Independent(s)&#x27; сложете всички предиктори.
+4. (Методът по подразбиране е &#x27;Enter&#x27; - оставяте го така).
+5. OK.</pre></div>
+          <div class="section-nav">
+            <a class="btn btn-soft" href="#topic-1">← Предишна тема</a>
+            <div class="nav-right">
+              <a class="btn btn-soft" href="case-9.html">Към казуса</a>
+              <a class="btn btn-blue" href="#topic-3">Следваща тема →</a>
+            </div>
+          </div>
+        </article>
+        
+        <article id="topic-3" class="topic-block">
+          <div class="topic-order">Тема 3</div>
+          <h3>Коефициент на детерминация (R²)</h3>
+          <div class="topic-text">Ключов показател за качеството на модела! R² показва каква част от дисперсията (вариацията) на зависимата променлива се обяснява от вашия модел. Например, R² = 0.40 означава, че вашите предиктори обясняват 40% от случващото се.</div>
+          <div class="terminal"><div class="terminal-head">Как да го направим в SPSS</div><pre>Той излиза автоматично в първата голяма Output таблица, наречена &#x27;Model Summary&#x27;. Гледате колоната &#x27;R Square&#x27; или (по-правилно за множество предиктори) &#x27;Adjusted R Square&#x27;.</pre></div>
+          <div class="section-nav">
+            <a class="btn btn-soft" href="#topic-2">← Предишна тема</a>
+            <div class="nav-right">
+              <a class="btn btn-soft" href="case-9.html">Към казуса</a>
+              <a class="btn btn-blue" href="#topic-4">Следваща тема →</a>
+            </div>
+          </div>
+        </article>
+        
+        <article id="topic-4" class="topic-block">
+          <div class="topic-order">Тема 4</div>
+          <h3>Проверка на мултиколинеарност</h3>
+          <div class="topic-text">Задължителна диагностика при множествената регресия. Ако два от вашите предиктора са твърде силно свързани помежду си (корелация &gt; 0.80), те създават &#x27;шум&#x27; в модела (мултиколинеарност) и изкривяват резултатите. Единият трябва да бъде премахнат.</div>
+          <div class="terminal"><div class="terminal-head">Как да го направим в SPSS</div><pre>В прозореца Linear Regression:
+1. Кликнете на бутона &#x27;Statistics&#x27;.
+2. Маркирайте &#x27;Collinearity diagnostics&#x27;.
+3. Continue &gt; OK. В Output таблицата &#x27;Coefficients&#x27; ще се появят колони Tolerance и VIF. Търсите стойности на VIF, които са под 10 (в идеалния случай под 5).</pre></div>
+          <div class="section-nav">
+            <a class="btn btn-soft" href="#topic-3">← Предишна тема</a>
+            <div class="nav-right">
+              <a class="btn btn-soft" href="case-9.html">Към казуса</a>
+              
+            </div>
+          </div>
+        </article>
+        </div>
+<div class="section-nav">
+  <a class="btn btn-soft" href="module-8.html">← Модул 8</a>
+  <div class="nav-right">
+    <a class="btn btn-soft" href="case-9.html">Към казуса</a>
+    <a class="btn btn-blue" href="module-10.html">Модул 10 →</a>
+  </div>
+</div>
+</div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

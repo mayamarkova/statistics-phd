@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпаргалка · SPSS Навигатор</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+.shpargalka-shell * {box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+.shpargalka-shell {font-family: Arial, "DejaVu Sans", sans-serif;
+    font-size: 7pt;
+    color: #1a1a1a;
+    line-height: 1.2;
+    padding: 3mm;}
+.shpargalka-shell .header {text-align: center;
+    padding: 2px 0 4px 0;
+    border-bottom: 2px solid #2c3e50;
+    margin-bottom: 5px;}
+.shpargalka-shell .header h1 {font-size: 12pt;
+    color: #2c3e50;
+    font-weight: bold;
+    margin: 0;}
+.shpargalka-shell .header .subtitle {font-size: 7.5pt;
+    color: #555;
+    margin-top: 1px;}
+.shpargalka-shell /* Оформление в 3 колони чрез таблица - най-съвместимо */
+.layout {width: 100%;
+    border-collapse: separate;
+    border-spacing: 4px 0;}
+.shpargalka-shell .layout > tbody > tr > td {width: 33.33%;
+    vertical-align: top;
+    padding: 0;}
+.shpargalka-shell .section {border: 1px solid #bbb;
+    border-radius: 3px;
+    padding: 3px 5px;
+    background: #fafafa;
+    margin-bottom: 4px;}
+.shpargalka-shell .section-title {font-size: 8pt;
+    font-weight: bold;
+    padding: 2px 5px;
+    margin: -3px -5px 3px -5px;
+    border-radius: 2px 2px 0 0;
+    color: white;}
+.shpargalka-shell .compare {background: #1565c0;}
+.shpargalka-shell .correlate {background: #00695c;}
+.shpargalka-shell .regression {background: #c62828;}
+.shpargalka-shell .categorical {background: #6a1b9a;}
+.shpargalka-shell .assumptions {background: #ef6c00;}
+.shpargalka-shell .descriptives {background: #37474f;}
+.shpargalka-shell .report {background: #5d4037;}
+.shpargalka-shell .tbl {width: 100%;
+    border-collapse: collapse;
+    font-size: 6.5pt;}
+.shpargalka-shell .tbl th {background: #e8e8e8;
+    padding: 2px 3px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 1px solid #999;
+    font-size: 6.5pt;}
+.shpargalka-shell .tbl td {padding: 2px 3px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;}
+.shpargalka-shell .tbl tr:last-child td {border-bottom: none;}
+.shpargalka-shell .test-name {font-weight: bold;
+    color: #1565c0;
+    white-space: nowrap;}
+.shpargalka-shell .correlate-name {color: #00695c; font-weight: bold;}
+.shpargalka-shell .regression-name {color: #c62828; font-weight: bold;}
+.shpargalka-shell .categorical-name {color: #6a1b9a; font-weight: bold;}
+.shpargalka-shell .nonparam {color: #c62828; font-weight: bold;}
+.shpargalka-shell .spss-path {font-family: "Courier New", monospace;
+    font-size: 6pt;
+    background: #f0f0f0;
+    padding: 1px 3px;
+    border-radius: 2px;
+    color: #333;}
+.shpargalka-shell .use-case {font-style: italic;
+    color: #555;
+    font-size: 6.3pt;
+    line-height: 1.25;}
+.shpargalka-shell .small-note {font-size: 5.8pt;
+    color: #777;}
+.shpargalka-shell .check-list {list-style: none;
+    padding: 0;
+    margin: 0;}
+.shpargalka-shell .check-list li {padding: 1.5px 0 1.5px 12px;
+    position: relative;
+    font-size: 6.5pt;
+    line-height: 1.3;}
+.shpargalka-shell .check-list li:before {content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00695c;
+    font-weight: bold;}
+.shpargalka-shell .check-list li.warn:before {content: "⚠";
+    color: #ef6c00;}
+.shpargalka-shell .footer {margin-top: 5px;
+    padding: 4px 8px;
+    background: #fff3e0;
+    border: 1px solid #ef6c00;
+    border-radius: 3px;
+    font-size: 7pt;
+    color: #444;
+    text-align: center;
+    line-height: 1.35;}
+.shpargalka-shell .footer strong {color: #c62828;}
+.shpargalka-shell .p-interp {display: table;
+    width: 100%;
+    margin-top: 2px;
+    border-spacing: 3px 0;}
+.shpargalka-shell .p-box {display: table-cell;
+    padding: 3px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 6.5pt;}
+.shpargalka-shell .p-sig {background: #c8e6c9; color: #1b5e20;}
+.shpargalka-shell .p-nosig {background: #ffcdd2; color: #b71c1c;}
+.shpargalka-shell .mini-note {font-size: 6pt;
+    color: #666;
+    font-style: italic;
+    margin-top: 3px;
+    padding-top: 3px;
+    border-top: 1px dotted #ccc;
+    line-height: 1.3;}
+.shpargalka-shell .legend-row {margin-top: 3px;
+    font-size: 6pt;}
+.shpargalka-shell .legend-item {display: inline-block;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-right: 4px;}
+.shpargalka-shell .legend-blue {background: #e3f2fd; color: #0d47a1;}
+.shpargalka-shell .legend-red {background: #ffebee; color: #b71c1c;}
+.shpargalka-shell .apa-label {font-weight: bold;
+    color: #5d4037;
+    font-size: 7pt;
+    margin-top: 4px;
+    margin-bottom: 2px;}
+.shpargalka-shell .print-hint {text-align: center;
+    background: #e3f2fd;
+    padding: 5px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    font-size: 8pt;
+    color: #0d47a1;}
+.shpargalka-shell {padding: 0;}
+</style> </head>
+  <body data-page="shpargalka">
+    <div class="mobile-topbar"> <button id="menuBtn" type="button">☰ Меню</button>
+      <strong>SPSS Навигатор</strong> </div>
+    <div class="layout">
+      <aside id="sidebar" class="sidebar">
+        <div class="brand">
+          <h1>SPSS Навигатор</h1>
+          <p>Курс по статистика със SPSS</p>
+        </div>
+        <a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
+        <div class="nav-group-title">Учебни модули</div>
+        <a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул
+            0: Фундаментът</span></a> <a class="nav-item" href="module-1.html"><span
+            class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на
+            данните</span></a> <a class="nav-item" href="module-2.html"><span class="nav-icon">📘</span><span>Модул
+            2: Описателна статистика</span></a> <a class="nav-item" href="module-3.html"><span
+            class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално
+            разпределение)</span></a> <a class="nav-item" href="module-4.html"><span
+            class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
+        <a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул
+            5: Две независими групи</span></a> <a class="nav-item" href="module-6.html"><span
+            class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
+        <a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул
+            7: Три или повече групи</span></a> <a class="nav-item" href="module-8.html"><span
+            class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
+        <a class="nav-item" href="module-9.html"><span class="nav-icon">📘</span><span>Модул
+            9: Линейна регресия</span></a> <a class="nav-item" href="module-10.html"><span
+            class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
+        <a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул
+            11: Валидиране на инструменти</span></a> <a class="nav-item" href="module-12.html"><span
+            class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
+        <div class="nav-group-title">Казуси</div>
+        <a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 0</span></a> <a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 1</span></a> <a class="nav-item" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 2</span></a> <a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 3</span></a> <a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 4</span></a> <a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 5</span></a> <a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 6</span></a> <a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 7</span></a> <a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 8</span></a> <a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 9</span></a> <a class="nav-item" href="case-10.html"><span
+            class="nav-icon">🧩</span><span>Казус · Модул 10</span></a> <a class="nav-item"
+          href="case-11.html"><span class="nav-icon">🧩</span><span>Казус ·
+            Модул 11</span></a> <a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 12</span></a>
+        <div class="nav-group-title">Материали</div>
+        <a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
+        <a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
+        <a class="nav-item active" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
+        <a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat
+            Sheet</span></a> <a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
+        <div class="footer-note">Курсови материали за докторанти</div>
+      </aside>
+      <main id="content" class="content">
+        <div class="page-shell">
+          <div class="page-head">
+            <div class="eyebrow">Материали</div>
+            <h1>Шпаргалка</h1>
+            <p>Компактна таблица със статистически тестове и SPSS пътеки.</p>
+          </div>
+          <div class="card pad shpargalka-wrap">
+            <div class="shpargalka-shell">
+              <div class="header">
+                <h1>ШПАРГАЛКА: СТАТИСТИЧЕСКИ ТЕСТОВЕ В SPSS</h1>
+                <div class="subtitle">Курс по Статистика със SPSS Statistics за
+                  докторанти · Русенски университет</div>
+              </div>
+              <table class="layout">
+                <tbody>
+                  <tr>
+                    <!-- ================ КОЛОНА 1 ================ -->
+                    <td>
+                      <!-- БЛОК 1: СРАВНЯВАНЕ НА ГРУПИ -->
+                      <div class="section">
+                        <div class="section-title compare">1. СРАВНЯВАНЕ НА
+                          ГРУПИ (средни стойности)</div>
+                        <table class="tbl">
+                          <tbody>
+                            <tr>
+                              <th>Тест</th>
+                              <th>Кога</th>
+                              <th>SPSS път</th>
+                            </tr>
+                            <tr>
+                              <td class="test-name">Independent<br>
+                                t-test</td>
+                              <td class="use-case">2 независими групи<br>
+                                нормално разпр.<br>
+                                <span class="small-note">пол → успех</span></td>
+                              <td><span class="spss-path">Analyze → Compare
+                                  Means → Independent-Samples T Test</span></td>
+                            </tr>
+                            <tr>
+                              <td class="test-name">Paired<br>
+                                t-test</td>
+                              <td class="use-case">Същите хора, 2 измервания<br>
+                                <span class="small-note">преди → след тренинг</span></td>
+                              <td><span class="spss-path">Analyze → Compare
+                                  Means → Paired-Samples T Test</span></td>
+                            </tr>
+                            <tr>
+                              <td class="test-name">One-way<br>
+                                ANOVA</td>
+                              <td class="use-case">3+ независими групи<br>
+                                <span class="small-note">успех по факултети</span></td>
+                              <td><span class="spss-path">Analyze → Compare
+                                  Means → One-Way ANOVA</span><br>
+                                <span class="small-note">Post-hoc: Tukey /
+                                  Bonferroni</span></td>
+                            </tr>
+                            <tr>
+                              <td class="test-name">Repeated<br>
+                                Measures<br>
+                                ANOVA</td>
+                              <td class="use-case">Същите хора, 3+ измервания<br>
+                                <span class="small-note">пулс в 3 момента</span></td>
+                              <td><span class="spss-path">Analyze → General
+                                  Linear Model → Repeated Measures</span></td>
+                            </tr>
+                            <tr>
+                              <td class="nonparam">Mann-<br>
+                                Whitney U</td>
+                              <td class="use-case">2 незав. групи<br>
+                                <strong>ненормални</strong> или ординални</td>
+                              <td><span class="spss-path">Analyze →
+                                  Nonparametric → Legacy → 2 Independent Samples</span></td>
+                            </tr>
+                            <tr>
+                              <td class="nonparam">Wilcoxon<br>
+                                Signed-<br>
+                                Rank</td>
+                              <td class="use-case">Същите хора, 2 измервания<br>
+                                ненормални</td>
+                              <td><span class="spss-path">Analyze →
+                                  Nonparametric → Legacy → 2 Related Samples</span></td>
+                            </tr>
+                            <tr>
+                              <td class="nonparam">Kruskal-<br>
+                                Wallis</td>
+                              <td class="use-case">3+ независими групи<br>
+                                ненормални</td>
+                              <td><span class="spss-path">Analyze →
+                                  Nonparametric → Legacy → K Independent Samples</span></td>
+                            </tr>
+                            <tr>
+                              <td class="nonparam">Friedman</td>
+                              <td class="use-case">Същите хора, 3+ измервания<br>
+                                ненормални</td>
+                              <td><span class="spss-path">Analyze →
+                                  Nonparametric → Legacy → K Related Samples</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="legend-row"> <span class="legend-item legend-blue">Син
+                            — параметрични</span> <span class="legend-item legend-red">Червен
+                            — непараметрични</span> </div>
+                      </div>
+                      <!-- БЛОК 5: ОПИСАТЕЛНА СТАТИСТИКА -->
+                      <div class="section">
+                        <div class="section-title descriptives">5. ОПИСАТЕЛНА
+                          СТАТИСТИКА</div>
+                        <table class="tbl">
+                          <tbody>
+                            <tr>
+                              <th>Какво</th>
+                              <th>Кога</th>
+                              <th>SPSS път</th>
+                            </tr>
+                            <tr>
+                              <td><strong>Честоти</strong></td>
+                              <td class="use-case">Брой, % на стойност<br>
+                                (категорийни)</td>
+                              <td><span class="spss-path">Analyze → Descriptive
+                                  Statistics → Frequencies</span></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Средно,<br>
+                                  SD, медиана</strong></td>
+                              <td class="use-case">Централна тенденция<br>
+                                (числови)</td>
+                              <td><span class="spss-path">Analyze → Descriptive
+                                  Statistics → Descriptives</span></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Средно<br>
+                                  по групи</strong></td>
+                              <td class="use-case">Описание на всяка<br>
+                                група отделно</td>
+                              <td><span class="spss-path">Analyze → Compare
+                                  Means → Means</span></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Skewness /<br>
+                                  Kurtosis</strong></td>
+                              <td class="use-case">Асиметрия, островърхост<br>
+                                |стойност| &lt; 2 ≈ нормално</td>
+                              <td><span class="spss-path">Descriptives → Options
+                                  → Skewness, Kurtosis</span></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Графики</strong></td>
+                              <td class="use-case">Boxplot, хистограма,<br>
+                                scatter, барчарт</td>
+                              <td><span class="spss-path">Graphs → Chart Builder</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="mini-note"> <strong>Винаги започвайте с
+                            описателна статистика</strong> — така откривате
+                          outliers, липсващи стойности и грешки. </div>
+                      </div>
+                    </td>
+                    <!-- ================ КОЛОНА 2 ================ -->
+                    <td>
+                      <!-- БЛОК 2: ВРЪЗКИ МЕЖДУ ПРОМЕНЛИВИ -->
+                      <div class="section">
+                        <div class="section-title correlate">2. ВРЪЗКИ МЕЖДУ
+                          ПРОМЕНЛИВИ</div>
+                        <table class="tbl">
+                          <tbody>
+                            <tr>
+                              <th>Тест</th>
+                              <th>Кога</th>
+                              <th>SPSS път</th>
+                            </tr>
+                            <tr>
+                              <td class="correlate-name">Pearson r</td>
+                              <td class="use-case">2 числови, нормално разпр.<br>
+                                линейна връзка<br>
+                                <span class="small-note">часове учене → успех</span></td>
+                              <td><span class="spss-path">Analyze → Correlate →
+                                  Bivariate → Pearson</span></td>
+                            </tr>
+                            <tr>
+                              <td class="correlate-name">Spearman ρ</td>
+                              <td class="use-case">Ординални или ненормални<br>
+                                <span class="small-note">ранг в класиране →
+                                  доход</span></td>
+                              <td><span class="spss-path">Analyze → Correlate →
+                                  Bivariate → Spearman</span></td>
+                            </tr>
+                            <tr>
+                              <td class="correlate-name">Kendall's<br>
+                                tau</td>
+                              <td class="use-case">Малка извадка (N&lt;30)<br>
+                                много повторения в ранговете</td>
+                              <td><span class="spss-path">Analyze → Correlate →
+                                  Bivariate → Kendall's tau-b</span></td>
+                            </tr>
+                            <tr>
+                              <td class="categorical-name">Chi-square<br>
+                                (χ²)</td>
+                              <td class="use-case">2 номинални/категорийни<br>
+                                <span class="small-note">пол → форма обучение</span></td>
+                              <td><span class="spss-path">Analyze → Descriptive
+                                  Statistics → Crosstabs → Statistics →
+                                  Chi-square</span></td>
+                            </tr>
+                            <tr>
+                              <td class="categorical-name">Fisher's<br>
+                                Exact</td>
+                              <td class="use-case">2×2 таблица, малки<br>
+                                очаквани честоти (&lt;5)</td>
+                              <td><span class="spss-path">Crosstabs → Statistics
+                                  → автоматично</span></td>
+                            </tr>
+                            <tr>
+                              <td class="categorical-name">McNemar</td>
+                              <td class="use-case">Зависими категорийни<br>
+                                <span class="small-note">мнение преди → след</span></td>
+                              <td><span class="spss-path">Analyze →
+                                  Nonparametric → Legacy → 2 Related Samples →
+                                  McNemar</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="mini-note"> <strong>Интерпретация на r / ρ:</strong>
+                          |r|&lt;0.3 слаба · 0.3–0.7 средна · &gt;0.7 силна
+                          връзка. Знакът (+/–) показва посоката. </div>
+                      </div>
+                      <!-- БЛОК 3: РЕГРЕСИЯ И ПРЕДСКАЗВАНЕ -->
+                      <div class="section">
+                        <div class="section-title regression">3. РЕГРЕСИЯ
+                          (предсказване)</div>
+                        <table class="tbl">
+                          <tbody>
+                            <tr>
+                              <th>Тест</th>
+                              <th>Кога</th>
+                              <th>SPSS път</th>
+                            </tr>
+                            <tr>
+                              <td class="regression-name">Проста<br>
+                                линейна</td>
+                              <td class="use-case">1 числова зависима<br>
+                                1 числов предиктор<br>
+                                <span class="small-note">успех ← часове</span></td>
+                              <td><span class="spss-path">Analyze → Regression →
+                                  Linear</span></td>
+                            </tr>
+                            <tr>
+                              <td class="regression-name">Множестве-<br>
+                                на линейна</td>
+                              <td class="use-case">1 числова зависима<br>
+                                2+ предиктори<br>
+                                <span class="small-note">успех ← часове, мотив.,
+                                  пол</span></td>
+                              <td><span class="spss-path">Analyze → Regression →
+                                  Linear</span><br>
+                                <span class="small-note">добавете всички
+                                  Independents</span></td>
+                            </tr>
+                            <tr>
+                              <td class="regression-name">Бинарна<br>
+                                логистична</td>
+                              <td class="use-case">Зависимата е 0/1<br>
+                                <span class="small-note">отпадане да/не ← оценки</span></td>
+                              <td><span class="spss-path">Analyze → Regression →
+                                  Binary Logistic</span></td>
+                            </tr>
+                            <tr>
+                              <td class="regression-name">Мултиноми-<br>
+                                ална</td>
+                              <td class="use-case">Зависимата има 3+ категории</td>
+                              <td><span class="spss-path">Analyze → Regression →
+                                  Multinomial Logistic</span></td>
+                            </tr>
+                            <tr>
+                              <td class="regression-name">Ординална</td>
+                              <td class="use-case">Зависимата е ординална
+                                (Likert)</td>
+                              <td><span class="spss-path">Analyze → Regression →
+                                  Ordinal</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="mini-note"> <strong>Ключови числа:</strong>
+                          R² (обясн. дисперсия) · β (коефициенти) · VIF &lt; 5
+                          (без мултиколинеарност) · Durbin-Watson ≈ 2
+                          (независимост на остатъците). </div>
+                      </div>
+                    </td>
+                    <!-- ================ КОЛОНА 3 ================ -->
+                    <td>
+                      <!-- БЛОК 4: ПРЕДПОСТАВКИ И ПРОВЕРКИ -->
+                      <div class="section">
+                        <div class="section-title assumptions">4. ПРЕДПОСТАВКИ —
+                          ПРОВЕРЕТЕ ПРЕДИ ТЕСТА</div>
+                        <table class="tbl">
+                          <tbody>
+                            <tr>
+                              <th>Предпоставка</th>
+                              <th>Как се проверява</th>
+                              <th>SPSS път</th>
+                            </tr>
+                            <tr>
+                              <td><strong>Нормалност</strong></td>
+                              <td class="use-case">Shapiro-Wilk (N&lt;50)<br>
+                                Kolmogorov-Smirnov (N≥50)<br>
+                                p &gt; 0.05 = нормално</td>
+                              <td><span class="spss-path">Analyze → Descriptive
+                                  Statistics → Explore → Plots → Normality plots</span></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Хомогенност<br>
+                                  на дисперсиите</strong></td>
+                              <td class="use-case">Levene's test<br>
+                                p &gt; 0.05 = равни</td>
+                              <td><span class="spss-path">Автоматично при t-test
+                                  и ANOVA</span></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Линейност</strong></td>
+                              <td class="use-case">Scatterplot<br>
+                                (за регресия, корелация)</td>
+                              <td><span class="spss-path">Graphs → Chart Builder
+                                  → Scatter/Dot</span></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Outliers</strong></td>
+                              <td class="use-case">Boxplot · Z-score &gt; ±3<br>
+                                Cook's distance &gt; 1</td>
+                              <td><span class="spss-path">Explore → Plots →
+                                  Boxplots</span></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Мулти-<br>
+                                  колинеарност</strong><br>
+                                <span class="small-note">(регресия)</span></td>
+                              <td class="use-case">VIF &lt; 5 (строго &lt; 10)<br>
+                                Tolerance &gt; 0.2</td>
+                              <td><span class="spss-path">Linear Regression →
+                                  Statistics → Collinearity diagnostics</span></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Размер<br>
+                                  на извадката</strong></td>
+                              <td class="use-case">t-test: N≥30 в група<br>
+                                ANOVA: N≥20 в група<br>
+                                Регресия: N≥20 / предиктор<br>
+                                χ²: всяка клетка ≥5</td>
+                              <td><span class="spss-path">Планиране: G*Power
+                                  (безплатна)</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- БЛОК 6: ИНТЕРПРЕТАЦИЯ И ДОКЛАД -->
+                      <div class="section">
+                        <div class="section-title report">6. ИНТЕРПРЕТАЦИЯ И APA
+                          ДОКЛАД</div>
+                        <p style="font-size: 7pt; margin-bottom: 2px;"><strong>Интерпретация
+                            на p-стойността:</strong></p>
+                        <div class="p-interp">
+                          <div class="p-box p-sig"><strong>p &lt; 0.05</strong><br>
+                            значимо — отхвърляме H₀</div>
+                          <div class="p-box p-nosig"><strong>p ≥ 0.05</strong><br>
+                            незначимо — не отхвърляме H₀</div>
+                        </div>
+                        <p class="apa-label">APA формат за докладване:</p>
+                        <table class="tbl">
+                          <tbody>
+                            <tr>
+                              <td style="width: 30%;"><strong>t-test</strong></td>
+                              <td class="use-case">t(df) = стойност, p = 0.xxx,
+                                d = x.xx</td>
+                            </tr>
+                            <tr>
+                              <td><strong>ANOVA</strong></td>
+                              <td class="use-case">F(df1, df2) = стойност, p =
+                                0.xxx, η² = x.xx</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Корелация</strong></td>
+                              <td class="use-case">r(df) = x.xx, p = 0.xxx</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Chi-square</strong></td>
+                              <td class="use-case">χ²(df, N = x) = стойност, p =
+                                0.xxx</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Регресия</strong></td>
+                              <td class="use-case">β = x.xx, t = x.xx, p =
+                                0.xxx, R² = x.xx</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p class="apa-label">Ефект-сайз (величина на ефекта):</p>
+                        <ul class="check-list">
+                          <li><strong>Cohen's d</strong> (t-test): 0.2 малък ·
+                            0.5 среден · 0.8 голям</li>
+                          <li><strong>η² (eta²)</strong> (ANOVA): 0.01 · 0.06 ·
+                            0.14</li>
+                          <li><strong>Cramer's V</strong> (χ²): 0.1 · 0.3 · 0.5</li>
+                          <li><strong>R²</strong> (регресия): 0.02 · 0.13 · 0.26</li>
+                          <li class="warn"><strong>Винаги докладвайте</strong>
+                            ефект-сайз, не само p!</li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="footer"> <strong>ЗЛАТНО ПРАВИЛО:</strong> Формулирай
+                хипотеза → определи типа променливи → избери тест → провери
+                предпоставки → изпълни → интерпретирай p И ефект-сайз →
+                докладвай в APA формат. &nbsp;·&nbsp; <strong>ВАЖНО:</strong>
+                Ако предпоставките не са изпълнени → използвайте непараметричен
+                вариант (червени тестове в блок 1). </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

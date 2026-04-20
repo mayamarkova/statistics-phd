@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Казус към Модул 5 · SPSS Навигатор</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+.case-wrap .kazus { margin-bottom:35px; border:1px solid #ddd; border-radius:12px; overflow:hidden; background:#fff; box-shadow:var(--shadow); }
+.case-wrap .kazus-header { padding:15px 22px; background:linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color:#fff; }
+.case-wrap .kazus-header .module-label { font-size:12px; opacity:.9; text-transform:uppercase; letter-spacing:1px; font-weight:bold; }
+.case-wrap .kazus-header .kazus-title { font-size:24px; font-weight:bold; margin-top:3px; margin-bottom:5px; }
+.case-wrap .kazus-header .kazus-meta { font-size:14px; opacity:.95; }
+.case-wrap .kazus-header .kazus-meta span { margin-right:15px; }
+.case-wrap .kazus-body { padding:20px 25px; background:#fff; line-height:1.7; }
+.case-wrap .section-label { font-size:18px; font-weight:bold; color:#1565c0; margin:18px 0 10px 0; padding-left:8px; border-left:3px solid #1565c0; }
+.case-wrap .section-label:first-child { margin-top:0; }
+.case-wrap .scenario { background:#fff8e1; padding:12px 16px; border-radius:8px; margin-bottom:12px; line-height:1.7; border-left:3px solid #ffa000; }
+.case-wrap .scenario strong { color:#e65100; }
+.case-wrap .task-list { margin:8px 0 12px 22px; line-height:1.8; }
+.case-wrap .task-list li { margin-bottom:4px; }
+.case-wrap .data-table { width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; }
+.case-wrap .data-table th { background:#37474f; color:#fff; padding:8px 10px; text-align:left; }
+.case-wrap .data-table td { padding:8px 10px; border-bottom:1px solid #e0e0e0; vertical-align:top; }
+.case-wrap .data-table tr:nth-child(even) td { background:#fafafa; }
+.case-wrap .output-sim, .case-wrap .mini-output, .case-wrap .formula-box, .case-wrap .decision-box, .case-wrap .hint-box, .case-wrap .teacher-note, .case-wrap .spss-box, .case-wrap .role-box, .case-wrap .mission-box { background:#f8fafc; border:1px solid #dbe2ea; border-radius:8px; padding:12px 16px; margin:10px 0; }
+.case-wrap details.answer-details { margin-top:14px; border:1px solid #86efac; background:#f0fdf4; border-radius:10px; overflow:hidden; }
+.case-wrap details.answer-details summary { list-style:none; cursor:pointer; padding:12px 16px; font-weight:700; background:#dcfce7; color:#166534; }
+.case-wrap details.answer-details summary::-webkit-details-marker { display:none; }
+.case-wrap .answer-box-static { padding:14px 16px; line-height:1.7; }
+.case-wrap .format-badge { display:inline-block; padding:2px 8px; border-radius:999px; font-weight:700; }
+.case-wrap .format-analysis { background:rgba(255,255,255,.15); }
+.case-wrap .format-detective { background:rgba(255,255,255,.15); }
+.case-wrap .format-roleplay { background:rgba(255,255,255,.15); }
+.case-wrap ul, .case-wrap ol { padding-left:20px; }
+.case-wrap p { margin:10px 0; }
+
+</style>
+</head>
+<body data-page="case-5">
+  <div class="mobile-topbar">
+    <button id="menuBtn" type="button">☰ Меню</button>
+    <strong>SPSS Навигатор</strong>
+  </div>
+  <div id="backdrop" class="sidebar-backdrop"></div>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar"><div class="brand">
+<h1>SPSS Навигатор</h1>
+<p>Курс по статистика със SPSS</p>
+</div>
+<a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
+<div class="nav-group-title">Учебни модули</div>
+<a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул 0: Фундаментът</span></a>
+<a class="nav-item" href="module-1.html"><span class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на данните</span></a>
+<a class="nav-item" href="module-2.html"><span class="nav-icon">📘</span><span>Модул 2: Описателна статистика</span></a>
+<a class="nav-item" href="module-3.html"><span class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално разпределение)</span></a>
+<a class="nav-item" href="module-4.html"><span class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
+<a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул 5: Две независими групи</span></a>
+<a class="nav-item" href="module-6.html"><span class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
+<a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул 7: Три или повече групи</span></a>
+<a class="nav-item" href="module-8.html"><span class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
+<a class="nav-item" href="module-9.html"><span class="nav-icon">📘</span><span>Модул 9: Линейна регресия</span></a>
+<a class="nav-item" href="module-10.html"><span class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
+<a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул 11: Валидиране на инструменти</span></a>
+<a class="nav-item" href="module-12.html"><span class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
+<div class="nav-group-title">Казуси</div>
+<a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус · Модул 0</span></a>
+<a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус · Модул 1</span></a>
+<a class="nav-item" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус · Модул 2</span></a>
+<a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус · Модул 3</span></a>
+<a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус · Модул 4</span></a>
+<a class="nav-item active" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус · Модул 5</span></a>
+<a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус · Модул 6</span></a>
+<a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус · Модул 7</span></a>
+<a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус · Модул 8</span></a>
+<a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус · Модул 9</span></a>
+<a class="nav-item" href="case-10.html"><span class="nav-icon">🧩</span><span>Казус · Модул 10</span></a>
+<a class="nav-item" href="case-11.html"><span class="nav-icon">🧩</span><span>Казус · Модул 11</span></a>
+<a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус · Модул 12</span></a>
+<div class="nav-group-title">Материали</div>
+<a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
+<a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
+<a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
+<a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat Sheet</span></a>
+<a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
+<div class="footer-note">Курсови материали за докторанти</div></aside>
+    <main id="content" class="content">
+      <div class="page-shell">
+<div class="page-head">
+  <div class="eyebrow">Казуси</div>
+  <h1>Казус към Модул 5</h1>
+  <p><a class="inline-link" href="module-5.html">Към учебния модул</a></p>
+</div>
+<div class="kazus-linkbar"><a class="btn btn-soft" href="module-5.html">← Към теорията</a></div>
+<div class="case-wrap"><div class="kazus" id="m5">
+<div class="kazus-header" style="background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);">
+<div class="module-label">Модул 5 · Две независими групи</div>
+<div class="kazus-title">Казус: "Четем t-test output"</div>
+<div class="kazus-meta">
+<span>⏱️ 20 мин.</span>
+<span class="format-badge format-analysis">📊 Аналитичен</span>
+<span>👥 Индивидуално</span>
+</div>
+</div>
+<div class="kazus-body">
+<div class="section-label">📋 Сценарий</div>
+<div class="scenario">
+            Дисертант е провел изследване за удовлетвореността от работата между мъже и жени в университетска среда. Ето изходните данни от SPSS. Вашата задача: <strong>интерпретирайте резултата и напишете 1 изречение в APA формат</strong>.
+        </div>
+<div class="section-label">📊 SPSS Output</div>
+<div class="output-sim">Group Statistics
+           Pol        N      Mean       Std. Deviation
+uspeh      Mazhe     45     4.82       0.68
+           Zheni     55     5.21       0.71
+
+Independent Samples Test
+                     Levene's Test       t-test for Equality of Means
+                     F       Sig.        t       df       Sig.(2-tailed)   Mean Diff
+Equal var assumed   0.42    0.519       -2.78    98       0.007           -0.39
+
+Independent Samples Effect Sizes
+                              Point Estimate
+Cohen's d                     -0.56</div>
+<div class="section-label">🎯 Въпроси</div>
+<ol class="task-list">
+<li>Коя е зависимата променлива? Независимата?</li>
+<li>Какво означава Levene's Test тук? Какъв ред четем?</li>
+<li>Има ли статистически значима разлика? Как го определяте?</li>
+<li>Интерпретирайте <strong>Cohen's d = -0.56</strong>. Какво означава знакът?</li>
+<li>Напишете 1 изречение в APA формат, готово за дисертация.</li>
+</ol>
+<details class="answer-details"><summary>Покажи решение</summary><div class="answer-box-static">
+<ol style="margin-left: 22px;">
+<li><strong>Зависима:</strong> удовлетвореност (Scale). <strong>Независима:</strong> Пол (Nominal, 2 групи).</li>
+<li>Levene's Test проверява хомогенността на дисперсиите. <strong>p = 0.519 &gt; 0.05</strong> → дисперсиите са равни → четем <em>първия</em> ред "Equal variances assumed".</li>
+<li><strong>Да, значима.</strong> p = 0.007 &lt; 0.05 → отхвърляме нулевата хипотеза.</li>
+<li>Cohen's d = -0.56 е <strong>среден ефект</strong> (0.5 се класифицира като среден). Знакът е отрицателен, защото групите са кодирани Мъже=1, Жени=2 и средното на мъжете (4.82) е по-ниско. Практически: жените имат по-висока удовлетвореност.</li>
+<li><strong>Пример в APA:</strong> <em>"Беше установена статистически значима разлика в удовлетвореността от работата между жените (M = 5.21, SD = 0.71) и мъжете (M = 4.82, SD = 0.68), t(98) = -2.78, p = 0.007, Cohen's d = -0.56, като ефектът е със средна величина."</em></li>
+</ol>
+<div class="tip" style="margin-top: 10px;">
+<strong>Често срещана грешка:</strong> Докторанти докладват само p-стойността. Рецензенти ВИНАГИ търсят ефект-сайз (Cohen's d за t-test). Без него — непълен доклад!
+            </div>
+</div></details>
+
+</div>
+</div></div>
+<div class="section-nav">
+  <a class="btn btn-soft" href="case-4.html">← Казус 4</a>
+  <div class="nav-right">
+    <a class="btn btn-soft" href="module-5.html">Към модула</a>
+    <a class="btn btn-blue" href="case-6.html">Казус 6 →</a>
+  </div>
+</div>
+</div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

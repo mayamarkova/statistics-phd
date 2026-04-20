@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Казус към Модул 4 · SPSS Навигатор</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+.case-wrap .kazus { margin-bottom:35px; border:1px solid #ddd; border-radius:12px; overflow:hidden; background:#fff; box-shadow:var(--shadow); }
+.case-wrap .kazus-header { padding:15px 22px; background:linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color:#fff; }
+.case-wrap .kazus-header .module-label { font-size:12px; opacity:.9; text-transform:uppercase; letter-spacing:1px; font-weight:bold; }
+.case-wrap .kazus-header .kazus-title { font-size:24px; font-weight:bold; margin-top:3px; margin-bottom:5px; }
+.case-wrap .kazus-header .kazus-meta { font-size:14px; opacity:.95; }
+.case-wrap .kazus-header .kazus-meta span { margin-right:15px; }
+.case-wrap .kazus-body { padding:20px 25px; background:#fff; line-height:1.7; }
+.case-wrap .section-label { font-size:18px; font-weight:bold; color:#1565c0; margin:18px 0 10px 0; padding-left:8px; border-left:3px solid #1565c0; }
+.case-wrap .section-label:first-child { margin-top:0; }
+.case-wrap .scenario { background:#fff8e1; padding:12px 16px; border-radius:8px; margin-bottom:12px; line-height:1.7; border-left:3px solid #ffa000; }
+.case-wrap .scenario strong { color:#e65100; }
+.case-wrap .task-list { margin:8px 0 12px 22px; line-height:1.8; }
+.case-wrap .task-list li { margin-bottom:4px; }
+.case-wrap .data-table { width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; }
+.case-wrap .data-table th { background:#37474f; color:#fff; padding:8px 10px; text-align:left; }
+.case-wrap .data-table td { padding:8px 10px; border-bottom:1px solid #e0e0e0; vertical-align:top; }
+.case-wrap .data-table tr:nth-child(even) td { background:#fafafa; }
+.case-wrap .output-sim, .case-wrap .mini-output, .case-wrap .formula-box, .case-wrap .decision-box, .case-wrap .hint-box, .case-wrap .teacher-note, .case-wrap .spss-box, .case-wrap .role-box, .case-wrap .mission-box { background:#f8fafc; border:1px solid #dbe2ea; border-radius:8px; padding:12px 16px; margin:10px 0; }
+.case-wrap details.answer-details { margin-top:14px; border:1px solid #86efac; background:#f0fdf4; border-radius:10px; overflow:hidden; }
+.case-wrap details.answer-details summary { list-style:none; cursor:pointer; padding:12px 16px; font-weight:700; background:#dcfce7; color:#166534; }
+.case-wrap details.answer-details summary::-webkit-details-marker { display:none; }
+.case-wrap .answer-box-static { padding:14px 16px; line-height:1.7; }
+.case-wrap .format-badge { display:inline-block; padding:2px 8px; border-radius:999px; font-weight:700; }
+.case-wrap .format-analysis { background:rgba(255,255,255,.15); }
+.case-wrap .format-detective { background:rgba(255,255,255,.15); }
+.case-wrap .format-roleplay { background:rgba(255,255,255,.15); }
+.case-wrap ul, .case-wrap ol { padding-left:20px; }
+.case-wrap p { margin:10px 0; }
+
+</style>
+</head>
+<body data-page="case-4">
+  <div class="mobile-topbar">
+    <button id="menuBtn" type="button">☰ Меню</button>
+    <strong>SPSS Навигатор</strong>
+  </div>
+  <div id="backdrop" class="sidebar-backdrop"></div>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar"><div class="brand">
+<h1>SPSS Навигатор</h1>
+<p>Курс по статистика със SPSS</p>
+</div>
+<a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
+<div class="nav-group-title">Учебни модули</div>
+<a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул 0: Фундаментът</span></a>
+<a class="nav-item" href="module-1.html"><span class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на данните</span></a>
+<a class="nav-item" href="module-2.html"><span class="nav-icon">📘</span><span>Модул 2: Описателна статистика</span></a>
+<a class="nav-item" href="module-3.html"><span class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално разпределение)</span></a>
+<a class="nav-item" href="module-4.html"><span class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
+<a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул 5: Две независими групи</span></a>
+<a class="nav-item" href="module-6.html"><span class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
+<a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул 7: Три или повече групи</span></a>
+<a class="nav-item" href="module-8.html"><span class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
+<a class="nav-item" href="module-9.html"><span class="nav-icon">📘</span><span>Модул 9: Линейна регресия</span></a>
+<a class="nav-item" href="module-10.html"><span class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
+<a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул 11: Валидиране на инструменти</span></a>
+<a class="nav-item" href="module-12.html"><span class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
+<div class="nav-group-title">Казуси</div>
+<a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус · Модул 0</span></a>
+<a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус · Модул 1</span></a>
+<a class="nav-item" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус · Модул 2</span></a>
+<a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус · Модул 3</span></a>
+<a class="nav-item active" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус · Модул 4</span></a>
+<a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус · Модул 5</span></a>
+<a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус · Модул 6</span></a>
+<a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус · Модул 7</span></a>
+<a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус · Модул 8</span></a>
+<a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус · Модул 9</span></a>
+<a class="nav-item" href="case-10.html"><span class="nav-icon">🧩</span><span>Казус · Модул 10</span></a>
+<a class="nav-item" href="case-11.html"><span class="nav-icon">🧩</span><span>Казус · Модул 11</span></a>
+<a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус · Модул 12</span></a>
+<div class="nav-group-title">Материали</div>
+<a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
+<a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
+<a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
+<a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat Sheet</span></a>
+<a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
+<div class="footer-note">Курсови материали за докторанти</div></aside>
+    <main id="content" class="content">
+      <div class="page-shell">
+<div class="page-head">
+  <div class="eyebrow">Казуси</div>
+  <h1>Казус към Модул 4</h1>
+  <p><a class="inline-link" href="module-4.html">Към учебния модул</a></p>
+</div>
+<div class="kazus-linkbar"><a class="btn btn-soft" href="module-4.html">← Към теорията</a></div>
+<div class="case-wrap"><div class="kazus" id="m4">
+<div class="kazus-header" style="background: linear-gradient(135deg, #00695c 0%, #004d40 100%);">
+<div class="module-label">Модул 4 · Корелационен анализ</div>
+<div class="kazus-title">Казус: "Корелация или каузалност?"</div>
+<div class="kazus-meta">
+<span>⏱️ 15 мин.</span>
+<span class="format-badge format-competition">🏆 Състезателен</span>
+<span>👥 Целия клас</span>
+</div>
+</div>
+<div class="kazus-body">
+<div class="section-label">📋 Сценарий</div>
+<div class="scenario">
+            Ще ви покажа <strong>6 корелации</strong>. За всяка трябва да определите: <strong>(1)</strong> коя корелация (Pearson или Spearman), <strong>(2)</strong> как бихте я интерпретирали и <strong>(3)</strong> оправдано ли е твърдението за причинно-следствена връзка.
+        </div>
+<div class="section-label">🎯 Ситуациите</div>
+<ol class="task-list">
+<li><strong>"Градовете с повече черкви имат повече убийства" (r = 0.68, p &lt; 0.01).</strong> Причинно-следствена?</li>
+<li><strong>"Броят часове сън корелира с резултата на изпит" (r = 0.45, p = 0.003, N = 80).</strong> Коя корелация? Можем ли да кажем "спи повече → по-добри оценки"?</li>
+<li><strong>"Ранг в класирането на турнира корелира с броя часове тренировки на седмица" (ρ = -0.62).</strong> Защо е отрицателен знакът? Защо Spearman?</li>
+<li><strong>"Часове пред екрана корелират с депресивни симптоми" (r = 0.21, p = 0.04, N = 400).</strong> Статистически значимо, но силно ли?</li>
+<li><strong>"Икономически растеж и честота на бракове" (r = -0.13, p = 0.28, N = 50).</strong> Какво заключение правим?</li>
+<li><strong>"Удовлетвореност на Likert 1-5 корелира с възрастта" (p &lt; 0.05).</strong> Коя корелация използваме?</li>
+</ol>
+<div class="section-label">🏆 Правила на състезанието</div>
+<p>За всяка ситуация групата с най-бързия <strong>и правилен</strong> отговор получава точка. В края групата с най-много точки печели.</p>
+<details class="answer-details"><summary>Покажи решения</summary><div class="answer-box-static">
+<ol style="margin-left: 22px;">
+<li><strong>НЕ е причинно-следствена.</strong> Спуриозна корелация — и двете растат с размера на града. Класически пример за трета скрита променлива.</li>
+<li><strong>Pearson</strong> (и двете числови). Средна положителна връзка. НЕ можем да твърдим каузалност — може и обратното (добрите оценки водят до спокоен сън) или трета променлива (напр. дисциплина).</li>
+<li><strong>Spearman</strong> — ранг е ординален. Отрицателен, защото нисък ранг = добра позиция (1-во място е по-добро от 10-то), а повече тренировки → по-нисък ранг = по-добро.</li>
+<li>Значимо (p &lt; 0.05), но <strong>слабо</strong> (r = 0.21 → r² = 0.04, т.е. само 4% споделена вариация). При голяма извадка (N = 400) дори слаби корелации стават значими.</li>
+<li><strong>НЕ отхвърляме нулевата хипотеза.</strong> p = 0.28 &gt; 0.05. Няма доказателства за връзка.</li>
+<li><strong>Spearman</strong> — поне една променлива (удовлетвореност) е ординална. Pearson би бил некоректен.</li>
+</ol>
+<div class="warning" style="margin-top: 10px;">
+<strong>Златно правило:</strong> Корелацията НИКОГА не доказва причинно-следствена връзка. За каузалност са нужни експерименти (рандомизация) или сложни модели (регресия с контролни променливи).
+            </div>
+</div></details>
+
+</div>
+</div></div>
+<div class="section-nav">
+  <a class="btn btn-soft" href="case-3.html">← Казус 3</a>
+  <div class="nav-right">
+    <a class="btn btn-soft" href="module-4.html">Към модула</a>
+    <a class="btn btn-blue" href="case-5.html">Казус 5 →</a>
+  </div>
+</div>
+</div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

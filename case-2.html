@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="bg">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Казус към Модул 2 · SPSS Навигатор</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Казус към Модул 2 · SPSS Навигатор</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
 
 .case-wrap .kazus { margin-bottom:35px; border:1px solid #ddd; border-radius:12px; overflow:hidden; background:#fff; box-shadow:var(--shadow); }
 .case-wrap .kazus-header { padding:15px 22px; background:linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color:#fff; }
@@ -35,81 +35,112 @@
 .case-wrap .format-roleplay { background:rgba(255,255,255,.15); }
 .case-wrap ul, .case-wrap ol { padding-left:20px; }
 .case-wrap p { margin:10px 0; }
+.output-sim {
+    background: #f5f5f5;
+    border: 1px solid #bbb;
+    padding: 12px 16px;
+    font-family: "Courier New", monospace;
+    font-size: 9.5pt;
+    border-radius: 4px;
+    margin: 10px 0;
+    white-space: pre;
+    overflow-x: auto;
+    line-height: 1.5;
+}
 
-</style>
-</head>
-<body data-page="case-2">
-  <div class="mobile-topbar">
-    <button id="menuBtn" type="button">☰ Меню</button>
-    <strong>SPSS Навигатор</strong>
-  </div>
-  <div id="backdrop" class="sidebar-backdrop"></div>
-  <div class="layout">
-    <aside id="sidebar" class="sidebar"><div class="brand">
-<h1>SPSS Навигатор</h1>
-<p>Курс по статистика със SPSS</p>
-</div>
-<a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
-<div class="nav-group-title">Учебни модули</div>
-<a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул 0: Фундаментът</span></a>
-<a class="nav-item" href="module-1.html"><span class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на данните</span></a>
-<a class="nav-item" href="module-2.html"><span class="nav-icon">📘</span><span>Модул 2: Описателна статистика</span></a>
-<a class="nav-item" href="module-3.html"><span class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално разпределение)</span></a>
-<a class="nav-item" href="module-4.html"><span class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
-<a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул 5: Две независими групи</span></a>
-<a class="nav-item" href="module-6.html"><span class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
-<a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул 7: Три или повече групи</span></a>
-<a class="nav-item" href="module-8.html"><span class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
-<a class="nav-item" href="module-9.html"><span class="nav-icon">📘</span><span>Модул 9: Линейна регресия</span></a>
-<a class="nav-item" href="module-10.html"><span class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
-<a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул 11: Валидиране на инструменти</span></a>
-<a class="nav-item" href="module-12.html"><span class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
-<div class="nav-group-title">Казуси</div>
-<a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус · Модул 0</span></a>
-<a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус · Модул 1</span></a>
-<a class="nav-item active" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус · Модул 2</span></a>
-<a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус · Модул 3</span></a>
-<a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус · Модул 4</span></a>
-<a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус · Модул 5</span></a>
-<a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус · Модул 6</span></a>
-<a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус · Модул 7</span></a>
-<a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус · Модул 8</span></a>
-<a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус · Модул 9</span></a>
-<a class="nav-item" href="case-10.html"><span class="nav-icon">🧩</span><span>Казус · Модул 10</span></a>
-<a class="nav-item" href="case-11.html"><span class="nav-icon">🧩</span><span>Казус · Модул 11</span></a>
-<a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус · Модул 12</span></a>
-<div class="nav-group-title">Материали</div>
-<a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
-<a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
-<a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
-<a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat Sheet</span></a>
-<a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
-<div class="footer-note">Курсови материали за докторанти</div></aside>
-    <main id="content" class="content">
-      <div class="page-shell">
-<div class="page-head">
-  <div class="eyebrow">Казуси</div>
-  <h1>Казус към Модул 2</h1>
-  <p><a class="inline-link" href="module-2.html">Към учебния модул</a></p>
-</div>
-<div class="kazus-linkbar"><a class="btn btn-soft" href="module-2.html">← Към теорията</a></div>
-<div class="case-wrap"><div class="kazus" id="m2">
-<div class="kazus-header" style="background: linear-gradient(135deg, #37474f 0%, #263238 100%);">
-<div class="module-label">Модул 2 · Описателна статистика</div>
-<div class="kazus-title">Казус: "Прочети профила на извадката"</div>
-<div class="kazus-meta">
-<span>⏱️ 15-20 мин.</span>
-<span class="format-badge format-analysis">📊 Аналитичен</span>
-<span>👥 Индивидуално или двойки</span>
-</div>
-</div>
-<div class="kazus-body">
-<div class="section-label">📋 Сценарий</div>
-<div class="scenario">
-            Вие сте рецензент на дисертация. Авторът пише: <em>"Нашата извадка е представителна за общата популация."</em> Ви се дава следният SPSS output. Вярно ли е твърдението? Какво бихте препоръчали?
+</style> </head>
+  <body data-page="case-2">
+    <div class="mobile-topbar"> <button id="menuBtn" type="button">☰ Меню</button>
+      <strong>SPSS Навигатор</strong> </div>
+    <div class="layout">
+      <aside id="sidebar" class="sidebar">
+        <div class="brand">
+          <h1>SPSS Навигатор</h1>
+          <p>Курс по статистика със SPSS</p>
         </div>
-<div class="section-label">📊 SPSS Output (Descriptives)</div>
-<div class="output-sim">Statistics
+        <a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
+        <div class="nav-group-title">Учебни модули</div>
+        <a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул
+            0: Фундаментът</span></a> <a class="nav-item" href="module-1.html"><span
+
+            class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на
+            данните</span></a> <a class="nav-item" href="module-2.html"><span class="nav-icon">📘</span><span>Модул
+            2: Описателна статистика</span></a> <a class="nav-item" href="module-3.html"><span
+
+            class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално
+            разпределение)</span></a> <a class="nav-item" href="module-4.html"><span
+
+            class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
+        <a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул
+            5: Две независими групи</span></a> <a class="nav-item" href="module-6.html"><span
+
+            class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
+        <a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул
+            7: Три или повече групи</span></a> <a class="nav-item" href="module-8.html"><span
+
+            class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
+        <a class="nav-item" href="module-9.html"><span class="nav-icon">📘</span><span>Модул
+            9: Линейна регресия</span></a> <a class="nav-item" href="module-10.html"><span
+
+            class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
+        <a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул
+            11: Валидиране на инструменти</span></a> <a class="nav-item" href="module-12.html"><span
+
+            class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
+        <div class="nav-group-title">Казуси</div>
+        <a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 0</span></a> <a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 1</span></a> <a class="nav-item active" href="case-2.html"><span
+
+            class="nav-icon">🧩</span><span>Казус · Модул 2</span></a> <a class="nav-item"
+
+          href="case-3.html"><span class="nav-icon">🧩</span><span>Казус · Модул
+            3</span></a> <a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 4</span></a> <a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 5</span></a> <a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 6</span></a> <a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 7</span></a> <a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 8</span></a> <a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 9</span></a> <a class="nav-item" href="case-10.html"><span
+
+            class="nav-icon">🧩</span><span>Казус · Модул 10</span></a> <a class="nav-item"
+
+          href="case-11.html"><span class="nav-icon">🧩</span><span>Казус ·
+            Модул 11</span></a> <a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 12</span></a>
+        <div class="nav-group-title">Материали</div>
+        <a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
+        <a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
+        <a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
+        <a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat
+            Sheet</span></a> <a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
+        <div class="footer-note">Курсови материали за докторанти</div>
+      </aside>
+      <main id="content" class="content">
+        <div class="page-shell">
+          <div class="page-head">
+            <div class="eyebrow">Казуси</div>
+            <h1>Казус към Модул 2</h1>
+            <p><a class="inline-link" href="module-2.html">Към учебния модул</a></p>
+          </div>
+          <div class="kazus-linkbar"><a class="btn btn-soft" href="module-2.html">←
+              Към теорията</a></div>
+          <div class="case-wrap">
+            <div class="kazus" id="m2">
+              <div class="kazus-header" style="background: linear-gradient(135deg, #37474f 0%, #263238 100%);">
+                <div class="module-label">Модул 2 · Описателна статистика</div>
+                <div class="kazus-title">Казус: "Прочети профила на извадката"</div>
+                <div class="kazus-meta"> <span>⏱️ 15-20 мин.</span> <span class="format-badge format-analysis">📊
+                    Аналитичен</span> <span>👥 Индивидуално или двойки</span> </div>
+              </div>
+              <div class="kazus-body">
+                <div class="section-label">📋 Сценарий</div>
+                <div class="scenario"> Вие сте рецензент на дисертация. Авторът
+                  пише: <em>"Нашата извадка е представителна за общата
+                    популация."</em> Ви се дава следният SPSS output. Вярно ли е
+                  твърдението? Какво бихте препоръчали? </div>
+                <div class="section-label">📊 SPSS Output (Descriptives)</div>
+          <div class="output-sim">Statistics
                  vazrast    dohod    obrazovanie
 N     Valid       120        120      120
       Missing     0          0        0
@@ -128,39 +159,64 @@ Frequency — образование
 Средно           58        48.3
 Висше            50        41.7
 Total            120       100.0</div>
-<div class="section-label">🎯 Въпроси</div>
-<ol class="task-list">
-<li>Възрастта нормално разпределена ли е? Как виждате това?</li>
-<li>Защо медианата на дохода (2100) е толкова различна от средния (2850)?</li>
-<li>Коя мярка за централна тенденция е по-подходяща за отчитане на дохода?</li>
-<li>Представителна ли е извадката за общата българска популация? Аргументирайте.</li>
-<li>Какво бихте препоръчали на автора преди да прави t-test или ANOVA?</li>
-</ol>
-<details class="answer-details"><summary>Покажи решение</summary><div class="answer-box-static">
-<ol style="margin-left: 22px;">
-<li><strong>Възрастта НЕ е нормално разпределена.</strong> Skewness = 1.85 е силно положителна асиметрия (приемливото е между -1 и +1). Hostogramът ще покаже "опашка" към по-високите възрасти. Shapiro-Wilk или K-S тест би потвърдил.</li>
-<li><strong>Положителна асиметрия в дохода</strong> (Skewness = 2.34, Kurtosis = 6.78). Малко хора с много високи доходи "издърпват" средното нагоре. Има <strong>outliers</strong> (до 15000 лв при медиана 2100).</li>
-<li><strong>Медианата</strong> — тя е устойчива на outliers. За дохода винаги се докладва медиана + интерквартилен интервал.</li>
-<li><strong>НЕ е представителна.</strong> По данни на НСИ около 30% от българите са с висше образование, а тук са 41.7%. Вероятно има bias (напр. хора от София, студенти и т.н.).</li>
-<li>Препоръки: <strong>(1)</strong> провери за outliers с Boxplot; <strong>(2)</strong> ако планира t-test на дохода — вероятно трябва непараметричен тест (Mann-Whitney); <strong>(3)</strong> обмисли логаритмична трансформация на дохода; <strong>(4)</strong> обсъди ограниченията в Дискусията.</li>
-</ol>
-<div class="tip" style="margin-top: 10px;">
-<strong>Ключов урок:</strong> Описателната статистика НЕ е формалност — тя ви казва какви тестове можете да ползвате по-нататък. Skewness и Kurtosis са важни като самите средни стойности.
+                <div class="section-label">🎯 Въпроси</div>
+                <ol class="task-list">
+                  <li>Възрастта нормално разпределена ли е? Как виждате това?</li>
+                  <li>Защо медианата на дохода (2100) е толкова различна от
+                    средния (2850)?</li>
+                  <li>Коя мярка за централна тенденция е по-подходяща за
+                    отчитане на дохода?</li>
+                  <li>Представителна ли е извадката за общата българска
+                    популация? Аргументирайте.</li>
+                  <li>Какво бихте препоръчали на автора преди да прави t-test
+                    или ANOVA?</li>
+                </ol>
+                <details class="answer-details">
+                  <summary>Покажи решение</summary>
+                  <div class="answer-box-static">
+                    <ol style="margin-left: 22px;">
+                      <li><strong>Възрастта НЕ е нормално разпределена.</strong>
+                        Skewness = 1.85 е силно положителна асиметрия
+                        (приемливото е между -1 и +1). Hostogramът ще покаже
+                        "опашка" към по-високите възрасти. Shapiro-Wilk или K-S
+                        тест би потвърдил.</li>
+                      <li><strong>Положителна асиметрия в дохода</strong>
+                        (Skewness = 2.34, Kurtosis = 6.78). Малко хора с много
+                        високи доходи "издърпват" средното нагоре. Има <strong>outliers</strong>
+                        (до 15000 лв при медиана 2100).</li>
+                      <li><strong>Медианата</strong> — тя е устойчива на
+                        outliers. За дохода винаги се докладва медиана +
+                        интерквартилен интервал.</li>
+                      <li><strong>НЕ е представителна.</strong> По данни на НСИ
+                        около 30% от българите са с висше образование, а тук са
+                        41.7%. Вероятно има bias (напр. хора от София, студенти
+                        и т.н.).</li>
+                      <li>Препоръки: <strong>(1)</strong> провери за outliers с
+                        Boxplot; <strong>(2)</strong> ако планира t-test на
+                        дохода — вероятно трябва непараметричен тест
+                        (Mann-Whitney); <strong>(3)</strong> обмисли
+                        логаритмична трансформация на дохода; <strong>(4)</strong>
+                        обсъди ограниченията в Дискусията.</li>
+                    </ol>
+                    <div class="tip" style="margin-top: 10px;"> <strong>Ключов
+                        урок:</strong> Описателната статистика НЕ е формалност —
+                      тя ви казва какви тестове можете да ползвате по-нататък.
+                      Skewness и Kurtosis са важни като самите средни стойности.
+                    </div>
+                  </div>
+                </details>
+              </div>
             </div>
-</div></details>
-
-</div>
-</div></div>
-<div class="section-nav">
-  <a class="btn btn-soft" href="case-1.html">← Казус 1</a>
-  <div class="nav-right">
-    <a class="btn btn-soft" href="module-2.html">Към модула</a>
-    <a class="btn btn-blue" href="case-3.html">Казус 3 →</a>
-  </div>
-</div>
-</div>
-    </main>
-  </div>
-  <script src="script.js"></script>
-</body>
+          </div>
+          <div class="section-nav"> <a class="btn btn-soft" href="case-1.html">←
+              Казус 1</a>
+            <div class="nav-right"> <a class="btn btn-soft" href="module-2.html">Към
+                модула</a> <a class="btn btn-blue" href="case-3.html">Казус 3 →</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,159 +1,217 @@
 <!DOCTYPE html>
 <html lang="bg">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Модул 2: Описателна статистика · SPSS Навигатор</title>
-  <link rel="stylesheet" href="styles.css">
-  
-</head>
-<body data-page="module-2">
-  <div class="mobile-topbar">
-    <button id="menuBtn" type="button">☰ Меню</button>
-    <strong>SPSS Навигатор</strong>
-  </div>
-  <div id="backdrop" class="sidebar-backdrop"></div>
-  <div class="layout">
-    <aside id="sidebar" class="sidebar"><div class="brand">
-<h1>SPSS Навигатор</h1>
-<p>Курс по статистика със SPSS</p>
-</div>
-<a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
-<div class="nav-group-title">Учебни модули</div>
-<a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул 0: Фундаментът</span></a>
-<a class="nav-item" href="module-1.html"><span class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на данните</span></a>
-<a class="nav-item active" href="module-2.html"><span class="nav-icon">📘</span><span>Модул 2: Описателна статистика</span></a>
-<a class="nav-item" href="module-3.html"><span class="nav-icon">📘</span><span>Модул 3: Диагностика (Нормално разпределение)</span></a>
-<a class="nav-item" href="module-4.html"><span class="nav-icon">📘</span><span>Модул 4: Корелационен анализ</span></a>
-<a class="nav-item" href="module-5.html"><span class="nav-icon">📘</span><span>Модул 5: Две независими групи</span></a>
-<a class="nav-item" href="module-6.html"><span class="nav-icon">📘</span><span>Модул 6: Две свързани групи</span></a>
-<a class="nav-item" href="module-7.html"><span class="nav-icon">📘</span><span>Модул 7: Три или повече групи</span></a>
-<a class="nav-item" href="module-8.html"><span class="nav-icon">📘</span><span>Модул 8: Категорийни данни</span></a>
-<a class="nav-item" href="module-9.html"><span class="nav-icon">📘</span><span>Модул 9: Линейна регресия</span></a>
-<a class="nav-item" href="module-10.html"><span class="nav-icon">📘</span><span>Модул 10: Логистична регресия</span></a>
-<a class="nav-item" href="module-11.html"><span class="nav-icon">📘</span><span>Модул 11: Валидиране на инструменти</span></a>
-<a class="nav-item" href="module-12.html"><span class="nav-icon">📘</span><span>Модул 12: Докладване и защита</span></a>
-<div class="nav-group-title">Казуси</div>
-<a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус · Модул 0</span></a>
-<a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус · Модул 1</span></a>
-<a class="nav-item" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус · Модул 2</span></a>
-<a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус · Модул 3</span></a>
-<a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус · Модул 4</span></a>
-<a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус · Модул 5</span></a>
-<a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус · Модул 6</span></a>
-<a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус · Модул 7</span></a>
-<a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус · Модул 8</span></a>
-<a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус · Модул 9</span></a>
-<a class="nav-item" href="case-10.html"><span class="nav-icon">🧩</span><span>Казус · Модул 10</span></a>
-<a class="nav-item" href="case-11.html"><span class="nav-icon">🧩</span><span>Казус · Модул 11</span></a>
-<a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус · Модул 12</span></a>
-<div class="nav-group-title">Материали</div>
-<a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
-<a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
-<a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
-<a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat Sheet</span></a>
-<a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
-<div class="footer-note">Курсови материали за докторанти</div></aside>
-    <main id="content" class="content">
-      <div class="page-shell">
-<div class="page-head">
-  <div class="eyebrow">Учебен модул 2</div>
-  <h1>Модул 2: Описателна статистика</h1>
-  <p>Запознаване с извадката</p>
-</div>
-<div class="card pad">
-  <div class="intro-box">
-    <div class="info-badge">i</div>
-    <div><strong>Въведение</strong><br><span style="display:block; margin-top:6px; line-height:1.8;">Първата стъпка от същинския анализ (обикновено първата секция в глава &#x27;Резултати&#x27;). Тук описваме демографския профил на участниците и основните тенденции.</span></div>
-  </div>
-</div>
-<div class="card pad" style="margin-top:20px;">
-  <h3 style="margin-top:0;">Подтеми</h3>
-  <div class="topic-chip-row"><a class="topic-chip" href="#topic-1">1. Мерки за централна тенденция (Mean, Median, Mode)</a><a class="topic-chip" href="#topic-2">2. Мерки за разсейване (Standard Deviation, Variance)</a><a class="topic-chip" href="#topic-3">3. Честотни разпределения</a><a class="topic-chip" href="#topic-4">4. Визуализация на данни (Bar charts, Histograms)</a></div>
-</div>
-<div class="topic-stack">
-        <article id="topic-1" class="topic-block">
-          <div class="topic-order">Тема 1</div>
-          <h3>Мерки за централна тенденция (Mean, Median, Mode)</h3>
-          <div class="topic-text">Не пускайте &#x27;средно аритметично&#x27; за всичко. За номинални данни (Пол) се гледа Мода (най-често срещаната стойност). За ординални данни или такива с екстремни изкривявания (Заплати) се гледа Медиана. Средната стойност (Mean) се ползва само за нормално разпределени количествени (Scale) данни.</div>
-          <div class="terminal"><div class="terminal-head">Как да го направим в SPSS</div><pre>1. Analyze &gt; Descriptive Statistics &gt; Frequencies.
-2. Прехвърлете променливата.
-3. Кликнете на бутона &#x27;Statistics&#x27;.
-4. В секцията &#x27;Central Tendency&#x27; маркирайте Mean, Median или Mode според типа данни.
-5. Continue &gt; OK.</pre></div>
-          <div class="section-nav">
-            <span></span>
-            <div class="nav-right">
-              <a class="btn btn-soft" href="case-2.html">Към казуса</a>
-              <a class="btn btn-blue" href="#topic-2">Следваща тема →</a>
-            </div>
-          </div>
-        </article>
-        
-        <article id="topic-2" class="topic-block">
-          <div class="topic-order">Тема 2</div>
-          <h3>Мерки за разсейване (Standard Deviation, Variance)</h3>
-          <div class="topic-text">Стандартното отклонение (SD) показва колко &#x27;разпръснати&#x27; са данните около средната стойност. Малко отклонение означава, че респондентите са отговаряли сходно. Задължително се докладва заедно със средното аритметично (напр. M = 15.2, SD = 2.1).</div>
-          <div class="terminal"><div class="terminal-head">Как да го направим в SPSS</div><pre>1. Analyze &gt; Descriptive Statistics &gt; Descriptives (или Frequencies).
-2. Прехвърлете количествените променливи.
-3. Кликнете на бутона &#x27;Options&#x27; (или &#x27;Statistics&#x27;).
-4. Маркирайте &#x27;Std. deviation&#x27; и &#x27;Variance&#x27;.
-5. Continue &gt; OK.</pre></div>
-          <div class="section-nav">
-            <a class="btn btn-soft" href="#topic-1">← Предишна тема</a>
-            <div class="nav-right">
-              <a class="btn btn-soft" href="case-2.html">Към казуса</a>
-              <a class="btn btn-blue" href="#topic-3">Следваща тема →</a>
-            </div>
-          </div>
-        </article>
-        
-        <article id="topic-3" class="topic-block">
-          <div class="topic-order">Тема 3</div>
-          <h3>Честотни разпределения</h3>
-          <div class="topic-text">За категорийни данни (Пол, Образование) използвайте Analyze &gt; Descriptive Statistics &gt; Frequencies. Това генерира таблици, показващи броя и процента на участниците във всяка категория (напр. 60% жени, 40% мъже).</div>
-          <div class="terminal"><div class="terminal-head">Как да го направим в SPSS</div><pre>1. Analyze &gt; Descriptive Statistics &gt; Frequencies.
-2. Прехвърлете категорийните променливи (Nominal/Ordinal).
-3. Уверете се, че отметката &#x27;Display frequency tables&#x27; (показване на честотни таблици) е маркирана.
-4. Натиснете OK.
-5. Гледайте колоните &#x27;Frequency&#x27; (брой) и &#x27;Valid Percent&#x27; (процент без липсващите данни).</pre></div>
-          <div class="section-nav">
-            <a class="btn btn-soft" href="#topic-2">← Предишна тема</a>
-            <div class="nav-right">
-              <a class="btn btn-soft" href="case-2.html">Към казуса</a>
-              <a class="btn btn-blue" href="#topic-4">Следваща тема →</a>
-            </div>
-          </div>
-        </article>
-        
-        <article id="topic-4" class="topic-block">
-          <div class="topic-order">Тема 4</div>
-          <h3>Визуализация на данни (Bar charts, Histograms)</h3>
-          <div class="topic-text">Графиките са най-добрият начин да &#x27;видите&#x27; данните си. От менюто Frequencies &gt; Charts можете да изберете Bar charts (за категорийни данни) или Histograms (за количествени данни, където търсим камбановидна форма).</div>
-          <div class="terminal"><div class="terminal-head">Как да го направим в SPSS</div><pre>1. Analyze &gt; Descriptive Statistics &gt; Frequencies.
-2. Кликнете на бутона &#x27;Charts&#x27;.
-3. За категорийни данни изберете &#x27;Bar charts&#x27; и маркирайте &#x27;Percentages&#x27;.
-4. За количествени (Scale) данни изберете &#x27;Histograms&#x27; и маркирайте &#x27;Show normal curve on histogram&#x27;.
-5. Continue &gt; OK.</pre></div>
-          <div class="section-nav">
-            <a class="btn btn-soft" href="#topic-3">← Предишна тема</a>
-            <div class="nav-right">
-              <a class="btn btn-soft" href="case-2.html">Към казуса</a>
-              
-            </div>
-          </div>
-        </article>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модул 2: Описателна статистика · SPSS Навигатор</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="module-2">
+    <div class="mobile-topbar"> <button id="menuBtn" type="button">☰ Меню</button>
+      <strong>SPSS Навигатор</strong> </div>
+    <div class="layout">
+      <aside id="sidebar" class="sidebar">
+        <div class="brand">
+          <h1>SPSS Навигатор</h1>
+          <p>Курс по статистика със SPSS</p>
         </div>
-<div class="section-nav">
-  <a class="btn btn-soft" href="module-1.html">← Модул 1</a>
-  <div class="nav-right">
-    <a class="btn btn-soft" href="case-2.html">Към казуса</a>
-    <a class="btn btn-blue" href="module-3.html">Модул 3 →</a>
-  </div>
-</div>
-</div>
-    </main>
-  </div>
-  <script src="script.js"></script>
-</body>
+        <a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span>Начало</span></a>
+        <div class="nav-group-title">Учебни модули</div>
+        <a class="nav-item" href="module-0.html"><span class="nav-icon">📘</span><span>Модул
+            0: Фундаментът</span></a> <a class="nav-item" href="module-1.html"><span
+
+            class="nav-icon">📘</span><span>Модул 1: Подготовка и хигиена на
+            данните</span></a> <a class="nav-item active" href="module-2.html"><span
+
+            class="nav-icon">📘</span><span>Модул 2: Описателна статистика</span></a>
+        <a class="nav-item" href="module-3.html"><span class="nav-icon">📘</span><span>Модул
+            3: Диагностика (Нормално разпределение)</span></a> <a class="nav-item"
+
+          href="module-4.html"><span class="nav-icon">📘</span><span>Модул 4:
+            Корелационен анализ</span></a> <a class="nav-item" href="module-5.html"><span
+
+            class="nav-icon">📘</span><span>Модул 5: Две независими групи</span></a>
+        <a class="nav-item" href="module-6.html"><span class="nav-icon">📘</span><span>Модул
+            6: Две свързани групи</span></a> <a class="nav-item" href="module-7.html"><span
+
+            class="nav-icon">📘</span><span>Модул 7: Три или повече групи</span></a>
+        <a class="nav-item" href="module-8.html"><span class="nav-icon">📘</span><span>Модул
+            8: Категорийни данни</span></a> <a class="nav-item" href="module-9.html"><span
+
+            class="nav-icon">📘</span><span>Модул 9: Линейна регресия</span></a>
+        <a class="nav-item" href="module-10.html"><span class="nav-icon">📘</span><span>Модул
+            10: Логистична регресия</span></a> <a class="nav-item" href="module-11.html"><span
+
+            class="nav-icon">📘</span><span>Модул 11: Валидиране на инструменти</span></a>
+        <a class="nav-item" href="module-12.html"><span class="nav-icon">📘</span><span>Модул
+            12: Докладване и защита</span></a>
+        <div class="nav-group-title">Казуси</div>
+        <a class="nav-item" href="case-0.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 0</span></a> <a class="nav-item" href="case-1.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 1</span></a> <a class="nav-item" href="case-2.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 2</span></a> <a class="nav-item" href="case-3.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 3</span></a> <a class="nav-item" href="case-4.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 4</span></a> <a class="nav-item" href="case-5.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 5</span></a> <a class="nav-item" href="case-6.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 6</span></a> <a class="nav-item" href="case-7.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 7</span></a> <a class="nav-item" href="case-8.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 8</span></a> <a class="nav-item" href="case-9.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 9</span></a> <a class="nav-item" href="case-10.html"><span
+
+            class="nav-icon">🧩</span><span>Казус · Модул 10</span></a> <a class="nav-item"
+
+          href="case-11.html"><span class="nav-icon">🧩</span><span>Казус ·
+            Модул 11</span></a> <a class="nav-item" href="case-12.html"><span class="nav-icon">🧩</span><span>Казус
+            · Модул 12</span></a>
+        <div class="nav-group-title">Материали</div>
+        <a class="nav-item" href="referat.html"><span class="nav-icon">📝</span><span>Реферат</span></a>
+        <a class="nav-item" href="cards.html"><span class="nav-icon">🗺️</span><span>Карти</span></a>
+        <a class="nav-item" href="shpargalka.html"><span class="nav-icon">📌</span><span>Шпаргалка</span></a>
+        <a class="nav-item" href="cheat-sheet.html"><span class="nav-icon">📄</span><span>Cheat
+            Sheet</span></a> <a class="nav-item" href="dictionary.html"><span class="nav-icon">📚</span><span>Мини-речник</span></a>
+        <div class="footer-note">Курсови материали за докторанти</div>
+      </aside>
+      <main id="content" class="content">
+        <div class="page-shell">
+          <div class="page-head">
+            <div class="eyebrow">Учебен модул 2</div>
+            <h1>Модул 2: Описателна статистика</h1>
+            <p>Запознаване с извадката</p>
+          </div>
+          <div class="card pad">
+            <div class="intro-box">
+              <div class="info-badge">i</div>
+              <div><strong>Въведение</strong><br>
+                <span style="display:block; margin-top:6px; line-height:1.8;">Първата
+                  стъпка от същинския анализ (обикновено първата секция в глава
+                  'Резултати'). Тук описваме демографския профил на участниците
+                  и основните тенденции.</span></div>
+            </div>
+          </div>
+          <div class="card pad" style="margin-top:20px;">
+            <h3 style="margin-top:0;">Подтеми</h3>
+            <div class="topic-chip-row"><a class="topic-chip" href="#topic-1">1.
+                Мерки за централна тенденция (Mean, Median, Mode)</a><a class="topic-chip"
+
+                href="#topic-2">2. Мерки за разсейване (Standard Deviation,
+                Variance)</a><a class="topic-chip" href="#topic-3">3. Честотни
+                разпределения</a><a class="topic-chip" href="#topic-4">4.
+                Визуализация на данни (Bar charts, Histograms)</a></div>
+          </div>
+          <div class="topic-stack">
+            <article id="topic-1" class="topic-block">
+              <div class="topic-order">Тема 1</div>
+              <h3>Мерки за централна тенденция (Mean, Median, Mode)</h3>
+              <div class="topic-text">Не пускайте 'средно аритметично' за
+                всичко. За номинални данни (Пол) се гледа Мода (най-често
+                срещаната стойност). За ординални данни или такива с екстремни
+                изкривявания (Заплати) се гледа Медиана. Средната стойност
+                (Mean) се ползва само за нормално разпределени количествени
+                (Scale) данни.</div>
+              <div> <img src="assets/modul2-1.png" alt="Modul 2 - 1"> </div>
+              <div> <img src="assets/modul2-2.png" alt="Modul 2 - 2"> </div>
+              <div> <img src="assets/modul2-3.png" alt="Modul 2 - 3"> </div>
+              <div> <img src="assets/modul2-4.png" alt="Modul 2 - 4"> </div>
+              <div> <img src="assets/modul2-5.png" alt="Modul 2 - 5"> </div>
+              <div class="terminal">
+                <div class="terminal-head">Как да го направим в SPSS</div>
+                <pre>1. Analyze &gt; Descriptive Statistics &gt; Frequencies.
+2. Прехвърлете променливата.
+3. Кликнете на бутона 'Statistics'.
+4. В секцията 'Central Tendency' маркирайте Mean, Median или Mode според типа данни.
+5. Continue &gt; OK.</pre>
+              </div>
+              <div class="section-nav"> <span></span>
+                <div class="nav-right"> <a class="btn btn-soft" href="case-2.html">Към
+                    казуса</a> <a class="btn btn-blue" href="#topic-2">Следваща
+                    тема →</a> </div>
+              </div>
+            </article>
+            <article id="topic-2" class="topic-block">
+              <div class="topic-order">Тема 2</div>
+              <h3>Мерки за разсейване (Standard Deviation, Variance)</h3>
+              <div class="topic-text">Стандартното отклонение (SD) показва колко
+                'разпръснати' са данните около средната стойност. Малко
+                отклонение означава, че респондентите са отговаряли сходно.
+                Задължително се докладва заедно със средното аритметично (напр.
+                M = 15.2, SD = 2.1).</div>
+              <div> <img src="assets/modul2-6.png" alt="Modul 2 - 6"> </div>
+              <div> <img src="assets/modul2-7.png" alt="Modul 2 - 7"> </div>
+              <div> <img src="assets/modul2-8.png" alt="Modul 2 - 8"> </div>
+              <div class="terminal">
+                <div class="terminal-head">Как да го направим в SPSS</div>
+                <pre>1. Analyze &gt; Descriptive Statistics &gt; Descriptives (или Frequencies).
+2. Прехвърлете количествените променливи.
+3. Кликнете на бутона 'Options' (или 'Statistics').
+4. Маркирайте 'Std. deviation' и 'Variance'.
+5. Continue &gt; OK.</pre>
+              </div>
+              <div class="section-nav"> <a class="btn btn-soft" href="#topic-1">←
+                  Предишна тема</a>
+                <div class="nav-right"> <a class="btn btn-soft" href="case-2.html">Към
+                    казуса</a> <a class="btn btn-blue" href="#topic-3">Следваща
+                    тема →</a> </div>
+              </div>
+            </article>
+            <article id="topic-3" class="topic-block">
+              <div class="topic-order">Тема 3</div>
+              <h3>Честотни разпределения</h3>
+              <div class="topic-text">За категорийни данни (Пол, Образование)
+                използвайте Analyze &gt; Descriptive Statistics &gt;
+                Frequencies. Това генерира таблици, показващи броя и процента на
+                участниците във всяка категория (напр. 60% жени, 40% мъже).</div>
+              <div> <img src="assets/modul2-9.png" alt="Modul 2 - 9"> </div>
+              <div> <img src="assets/modul2-10.png" alt="Modul 2 - 10"> </div>
+              <div class="terminal">
+                <div class="terminal-head">Как да го направим в SPSS</div>
+                <pre>1. Analyze &gt; Descriptive Statistics &gt; Frequencies.
+2. Прехвърлете категорийните променливи (Nominal/Ordinal).
+3. Уверете се, че отметката 'Display frequency tables' (показване на честотни таблици) е маркирана.
+4. Натиснете OK.
+5. Гледайте колоните 'Frequency' (брой) и 'Valid Percent' (процент без липсващите данни).</pre>
+              </div>
+              <div class="section-nav"> <a class="btn btn-soft" href="#topic-2">←
+                  Предишна тема</a>
+                <div class="nav-right"> <a class="btn btn-soft" href="case-2.html">Към
+                    казуса</a> <a class="btn btn-blue" href="#topic-4">Следваща
+                    тема →</a> </div>
+              </div>
+            </article>
+            <article id="topic-4" class="topic-block">
+              <div class="topic-order">Тема 4</div>
+              <h3>Визуализация на данни (Bar charts, Histograms)</h3>
+              <div class="topic-text">Графиките са най-добрият начин да 'видите'
+                данните си. От менюто Frequencies &gt; Charts можете да изберете
+                Bar charts (за категорийни данни) или Histograms (за
+                количествени данни, където търсим камбановидна
+                форма).</div>
+              <div> <img src="assets/modul2-11.png" alt="Modul 2 - 11"> </div>
+                <div> <img src="assets/modul2-12.png" alt="Modul 2 - 12"> </div>
+                <div> <img src="assets/modul2-13.png" alt="Modul 2 - 13"> </div>
+              <div class="terminal">
+                <div class="terminal-head">Как да го направим в SPSS</div>
+                <pre>1. Analyze &gt; Descriptive Statistics &gt; Frequencies.
+2. Кликнете на бутона 'Charts'.
+3. За категорийни данни изберете 'Bar charts' и маркирайте 'Percentages'.
+4. За количествени (Scale) данни изберете 'Histograms' и маркирайте 'Show normal curve on histogram'.
+5. Continue &gt; OK.</pre>
+              </div>
+              <div class="section-nav"> <a class="btn btn-soft" href="#topic-3">←
+                  Предишна тема</a>
+                <div class="nav-right"> <a class="btn btn-soft" href="case-2.html">Към
+                    казуса</a> </div>
+              </div>
+            </article>
+          </div>
+          <div class="section-nav"> <a class="btn btn-soft" href="module-1.html">←
+              Модул 1</a>
+            <div class="nav-right"> <a class="btn btn-soft" href="case-2.html">Към
+                казуса</a> <a class="btn btn-blue" href="module-3.html">Модул 3
+                →</a> </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
